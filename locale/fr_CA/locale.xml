@@ -21,6 +21,4 @@
 	<message key="plugins.generic.piwik.manager.settings.description"><![CDATA[<p> Au moyen de ce plugiciel, vous pouvez utiliser Piwik pour collecter et analyser l'utilisation et le trafic sur ce site Web pour cette revue. Veuillez noter que pour utiliser ce plugiciel, vous devez déjà avoir un compte Piwik. Veuillez consulter le <a href="https://piwik.org" title="site de Piwik">site de Piwik </a> pour de plus amples renseignements.</p><p>Veuillez noter que Piwik peut nécessiter jusqu'à 24 heures avant que les statistiques soient colligées et analysées. Durant cette période, la fonction 'Vérifier l'état' peut ne pas indiquer correctement s'il a détecter le code de repérage de la revue.</p>]]></message>
 	<message key="plugins.generic.piwik.manager.settings.piwikSiteId">Identifiant du site</message>
 	<message key="plugins.generic.piwik.manager.settings.piwikUrl">Adresse URL</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdRequired">Prière de sélectionner l'identifiant du site à utiliser.</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikUrlRequired">Prière de sélectionner l'adresse URL du site Piwik à utiliser.</message>
 </locale>

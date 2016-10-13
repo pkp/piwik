@@ -34,9 +34,6 @@ class PiwikSettingsForm extends Form {
 
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 
-		$this->addCheck(new FormValidator($this, 'piwikSiteId', 'required', 'plugins.generic.piwik.manager.settings.piwikSiteIdRequired'));
-		$this->addCheck(new FormValidator($this, 'piwikUrl', 'required', 'plugins.generic.piwik.manager.settings.piwikUrlRequired'));
-
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidatorCSRF($this));
 	}
@@ -55,8 +52,7 @@ class PiwikSettingsForm extends Form {
 	 * Assign form data to user-submitted data.
 	 */
 	function readInputData() {
-		$this->readUserVars(array('piwikSiteId'));
-		$this->readUserVars(array('piwikUrl'));
+		$this->readUserVars(array('piwikSiteId','piwikUrl'));
 	}
 
 	/**

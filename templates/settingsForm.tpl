@@ -1,5 +1,5 @@
 {**
- * plugins/generic/piwik/settingsForm.tpl
+ * plugins/generic/piwik/templates/settingsForm.tpl
  *
  * Copyright (c) 2014-2016 Simon Fraser University Library
  * Copyright (c) 2003-2016 John Willinsky
@@ -23,11 +23,10 @@
 </script>
 <form class="pkp_form" id="piwikSettingsForm" method="post" action="{url router=$smarty.const.ROUTE_COMPONENT op="manage" category="generic" plugin=$pluginName verb="settings" save=true}">
 	{csrf}
-	{include file="controllers/notification/inPlaceNotification.tpl" notificationId="piwikSettingsFormNotification"}
 
 	{fbvFormArea id="piwikSettingsFormArea"}
-		{fbvElement type="text" name="piwikUrl" value=$piwikUrl label="plugins.generic.piwik.manager.settings.piwikUrl"}
-		{fbvElement type="text" name="piwikSiteId" value=$piwikSiteId label="plugins.generic.piwik.manager.settings.piwikSiteId"}
+		{fbvElement type="text" id="piwikUrl" name="piwikUrl" value=$piwikUrl label="plugins.generic.piwik.manager.settings.piwikUrl" required=true}
+		{fbvElement type="text" id="piwikSiteId" name="piwikSiteId" value=$piwikSiteId label="plugins.generic.piwik.manager.settings.piwikSiteId" required=true}
 	{/fbvFormArea}
 
 	{fbvFormButtons}

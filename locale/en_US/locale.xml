@@ -21,6 +21,4 @@
 	<message key="plugins.generic.piwik.manager.settings.description"><![CDATA[<p>With this plugin enabled Piwik may be used to collect and analyze web site usage and traffic. Please note that this plugin requires that you have already setup Piwik. Please see the <a href="https://piwik.org/" title="Piwik site">Piwik site</a> for more information.</p><p>Please note that Piwik may require up to 24 hours before statistics are collected and reported. During this period, the 'Check Status' function may not accurately report whether it has detected the required tracking code.</p>]]></message>
 	<message key="plugins.generic.piwik.manager.settings.piwikSiteId">Website ID</message>
 	<message key="plugins.generic.piwik.manager.settings.piwikUrl">Piwik URL</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdRequired">Please enter a website ID.</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikUrlRequired">Please enter a Piwik URL.</message>
 </locale>
