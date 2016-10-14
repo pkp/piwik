@@ -123,6 +123,8 @@ class PiwikPlugin extends GenericPlugin {
 		$piwikUrl = $this->getSetting($context->getId(), 'piwikUrl');
 		if (empty($piwikSiteId) || empty($piwikUrl)) return false;
 	
+		$contextPath = $context->getPath();
+
 		$piwikCode = <<< EOF
 			var _paq = _paq || [];
 			  _paq.push(['trackPageView']);
@@ -131,6 +133,7 @@ class PiwikPlugin extends GenericPlugin {
 			    var u="//{$piwikUrl}/";
 			    _paq.push(['setTrackerUrl', u+'piwik.php']);
 			    _paq.push(['setSiteId', {$piwikSiteId}]);
+			    _paq.push(['setDocumentTitle', "{$contextPath}"]);
 			    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
 			    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
 			  })();
