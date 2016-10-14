@@ -25,8 +25,13 @@
 	{csrf}
 
 	{fbvFormArea id="piwikSettingsFormArea"}
-		{fbvElement type="text" id="piwikUrl" name="piwikUrl" value=$piwikUrl label="plugins.generic.piwik.manager.settings.piwikUrl" required=true}
-		{fbvElement type="text" id="piwikSiteId" name="piwikSiteId" value=$piwikSiteId label="plugins.generic.piwik.manager.settings.piwikSiteId" required=true}
+		{fbvFormSection for="piwikUrl" title="plugins.generic.piwik.manager.settings.piwikUrl" description="plugins.generic.piwik.manager.settings.piwikUrlInstructions"}
+			{fbvElement type="text" id="piwikUrl" name="piwikUrl" value=$piwikUrl label="plugins.generic.piwik.manager.settings.piwikUrl" required=true}
+		{/fbvFormSection}
+
+		{fbvFormSection for="piwikSiteId" title="plugins.generic.piwik.manager.settings.piwikSiteId" description="plugins.generic.piwik.manager.settings.piwikSiteIdInstructions"}
+			{fbvElement type="text" id="piwikSiteId" name="piwikSiteId" value=$piwikSiteId label="plugins.generic.piwik.manager.settings.piwikSiteId" required=true}
+		{/fbvFormSection}
 	{/fbvFormArea}
 
 	{fbvFormButtons}
