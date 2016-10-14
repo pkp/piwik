@@ -34,6 +34,9 @@ class PiwikSettingsForm extends Form {
 
 		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
 
+		$this->addCheck(new FormValidator($this, 'piwikSiteId', 'required', 'plugins.generic.piwik.manager.settings.piwikSiteIdRequired'));
+		$this->addCheck(new FormValidator($this, 'piwikUrl', 'required', 'plugins.generic.piwik.manager.settings.piwikUrlRequired'));
+
 		$this->addCheck(new FormValidatorPost($this));
 		$this->addCheck(new FormValidatorCSRF($this));
 	}
