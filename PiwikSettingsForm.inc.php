@@ -72,7 +72,7 @@ class PiwikSettingsForm extends Form {
 	 * Save settings.
 	 */
 	function execute() {
-		$this->_plugin->updateSetting($this->_journalId, 'piwikSiteId', trim($this->getData('piwikSiteId'), "\"\';"), 'string');
+		$this->_plugin->updateSetting($this->_journalId, 'piwikSiteId', $this->getData('piwikSiteId'), 'int');
 		$this->_plugin->updateSetting($this->_journalId, 'piwikUrl', trim($this->getData('piwikUrl'), "\"\';"), 'string');
 	}
 }
