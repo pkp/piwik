@@ -4,8 +4,8 @@
 <!--
   * plugins/generic/piwik/version.xml
   *
-  * Copyright (c) 2013-2016 Simon Fraser University Library
-  * Copyright (c) 2003-2016 John Willinsky
+  * Copyright (c) 2013-2017 Simon Fraser University Library
+  * Copyright (c) 2003-2017 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
   *
   * Plugin version information.
@@ -14,7 +14,7 @@
 	<application>piwik</application>
 	<type>plugins.generic</type>
 	<release>1.0.0.0</release>
-	<date>2016-10-13</date>
+	<date>2017-02-03</date>
 	<lazy-load>1</lazy-load>
 	<class>PiwikPlugin</class>
 </version>
