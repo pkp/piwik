@@ -10,7 +10,7 @@
  * @class PiwikSettingsForm
  * @ingroup plugins_generic_piwik
  *
- * @brief Form for journal managers to modify Piwik plugin settings
+ * @brief Form for managers to modify Piwik plugin settings
  */
 
 import('lib.pkp.classes.form.Form');
@@ -18,7 +18,7 @@ import('lib.pkp.classes.form.Form');
 class PiwikSettingsForm extends Form {
 
 	/** @var int */
-	var $_journalId;
+	var $_contextId;
 
 	/** @var object */
 	var $_plugin;
@@ -26,13 +26,13 @@ class PiwikSettingsForm extends Form {
 	/**
 	 * Constructor
 	 * @param $plugin PiwikPlugin
-	 * @param $journalId int
+	 * @param $contextId int
 	 */
-	function PiwikSettingsForm($plugin, $journalId) {
-		$this->_journalId = $journalId;
+	function __construct($plugin, $contextId) {
+		$this->_contextId = $contextId;
 		$this->_plugin = $plugin;
 
-		parent::Form($plugin->getTemplatePath() . 'settingsForm.tpl');
+		parent::__construct($plugin->getTemplatePath() . 'settingsForm.tpl');
 
 		$this->addCheck(new FormValidator($this, 'piwikSiteId', 'required', 'plugins.generic.piwik.manager.settings.piwikSiteIdRequired'));
 		$this->addCheck(new FormValidator($this, 'piwikUrl', 'required', 'plugins.generic.piwik.manager.settings.piwikUrlRequired'));
@@ -46,8 +46,8 @@ class PiwikSettingsForm extends Form {
 	 */
 	function initData() {
 		$this->_data = array(
-			'piwikSiteId' => $this->_plugin->getSetting($this->_journalId, 'piwikSiteId'),
-			'piwikUrl' => $this->_plugin->getSetting($this->_journalId, 'piwikUrl'),
+			'piwikSiteId' => $this->_plugin->getSetting($this->_contextId, 'piwikSiteId'),
+			'piwikUrl' => $this->_plugin->getSetting($this->_contextId, 'piwikUrl'),
 		);
 	}
 
@@ -72,8 +72,8 @@ class PiwikSettingsForm extends Form {
 	 * Save settings.
 	 */
 	function execute() {
-		$this->_plugin->updateSetting($this->_journalId, 'piwikSiteId', $this->getData('piwikSiteId'), 'int');
-		$this->_plugin->updateSetting($this->_journalId, 'piwikUrl', trim($this->getData('piwikUrl'), "\"\';"), 'string');
+		$this->_plugin->updateSetting($this->_contextId, 'piwikSiteId', $this->getData('piwikSiteId'), 'int');
+		$this->_plugin->updateSetting($this->_contextId, 'piwikUrl', trim($this->getData('piwikUrl'), "\"\';"), 'string');
 	}
 }
 
