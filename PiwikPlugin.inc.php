@@ -28,10 +28,11 @@ class PiwikPlugin extends GenericPlugin {
 		if ($success && $this->getEnabled()) {
 			// Insert Piwik page tag to footer
 			HookRegistry::register('TemplateManager::display', array($this, 'registerScript'));
+			$this->_registerTemplateResource();
 		}
 		return $success;
 	}
-	
+
 	/**
 	 * Get the plugin display name.
 	 * @return string
@@ -39,7 +40,7 @@ class PiwikPlugin extends GenericPlugin {
 	function getDisplayName() {
 		return __('plugins.generic.piwik.displayName');
 	}
-	
+
 	/**
 	 * Get the plugin description.
 	 * @return string
@@ -47,7 +48,7 @@ class PiwikPlugin extends GenericPlugin {
 	function getDescription() {
 		return __('plugins.generic.piwik.description');
 	}
-	
+
 	/**
 	 * @copydoc Plugin::getActions()
 	 */
@@ -69,7 +70,7 @@ class PiwikPlugin extends GenericPlugin {
 				parent::getActions($request, $verb)
 		);
 	}
-	
+
 	/**
 	 * @copydoc Plugin::manage()
 	 */
@@ -77,14 +78,14 @@ class PiwikPlugin extends GenericPlugin {
 		switch ($request->getUserVar('verb')) {
 			case 'settings':
 				$context = $request->getContext();
-	
+
 				AppLocale::requireComponents(LOCALE_COMPONENT_APP_COMMON,  LOCALE_COMPONENT_PKP_MANAGER);
 				$templateMgr = TemplateManager::getManager($request);
 				$templateMgr->register_function('plugin_url', array($this, 'smartyPluginUrl'));
-	
+
 				$this->import('PiwikSettingsForm');
 				$form = new PiwikSettingsForm($this, $context->getId());
-	
+
 				if ($request->getUserVar('save')) {
 					$form->readInputData();
 					if ($form->validate()) {
@@ -98,15 +99,15 @@ class PiwikPlugin extends GenericPlugin {
 		}
 		return parent::manage($args, $request);
 	}
-	
+
 	/**
 	 * Override the builtin to get the correct template path.
 	 * @return string
 	 */
 	function getTemplatePath() {
-		return parent::getTemplatePath() . 'templates/';
+		return $this->getTemplateResourceName() . ':templates/';
 	}
-	
+
 	/**
 	 * Register the Piwik script tag
 	 * @param $hookName string
@@ -118,11 +119,11 @@ class PiwikPlugin extends GenericPlugin {
 		if (!$context) return false;
 		$router = $request->getRouter();
 		if (!is_a($router, 'PKPPageRouter')) return false;
-	
+
 		$piwikSiteId = $this->getSetting($context->getId(), 'piwikSiteId');
 		$piwikUrl = $this->getSetting($context->getId(), 'piwikUrl');
 		if (empty($piwikSiteId) || empty($piwikUrl)) return false;
-	
+
 		$contextPath = $context->getPath();
 
 		$piwikCode = <<< EOF
@@ -138,7 +139,7 @@ class PiwikPlugin extends GenericPlugin {
 			    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
 			  })();
 EOF;
-	
+
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->addJavaScript(
 				'piwik',
@@ -148,8 +149,8 @@ EOF;
 					'inline'   => true,
 				)
 		);
-	
+
 		return false;
 	}
-	
+
 }
