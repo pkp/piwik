@@ -1,0 +1,24 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE locale SYSTEM "../../../../lib/pkp/dtd/locale.dtd">
+
+<!--
+  * locale/pt_PT/locale.xml
+  *
+  * Copyright (c) 2014-2017 Simon Fraser University
+  * Copyright (c) 2003-2017 John Willinsky
+  * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
+  *
+  * Localization strings.
+  -->
+
+<locale name="pt_PT" full_name="Português (Portugal)">
+	<message key="plugins.generic.piwik.displayName">Plugin Piwik</message>
+	<message key="plugins.generic.piwik.description"><![CDATA[Integra o OJS com o Piwik, uma aplicação gratuita e em open source de análise de tráfego de sites. É necessário o Piwik estar instalado. Ver mais informação no <a href="http://piwik.org/" title="piwik site">site Piwik</a>.]]></message>
+	<message key="plugins.generic.piwik.manager.settings.description"><![CDATA[<p>Com este plugin ativado, o Piwik pode ser utilizado para recolher e analisar o tráfego e uso do site para esta revista. Note que este plugin requer que o Piwik já esteja previamente instalado. Para mais informações visite o <a href="http://piwik.org/" title="Piwik site">site Piwik</a>.</p>]]></message>
+	<message key="plugins.generic.piwik.manager.settings.piwikUrl">URL Piwik</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikUrlInstructions">O URL completo para a sua instalação Piwik (i.e. http://myserver.net/piwik).</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikUrlRequired">Insira um URL válido. Inclua http:// no início.</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikSiteId">ID do perfil do site</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdInstructions"><![CDATA[Dentro do Piwik, clique me Configurações -> Websites. O ID de perfil de site é exibido junto ao seu nome de perfil de site.]]></message>
+	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdRequired">Insir um ID de perfil de site.</message>
+</locale>
