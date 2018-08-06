@@ -1,4 +1,4 @@
-Piwik
+Matomo
 ===============
 
-This is a plugin adding Piwik support to OJS 3.0+.
+This is a plugin adding Matomo support to OJS 3.0+.
