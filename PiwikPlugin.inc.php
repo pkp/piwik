@@ -17,13 +17,10 @@ import('lib.pkp.classes.plugins.GenericPlugin');
 
 class PiwikPlugin extends GenericPlugin {
 	/**
-	 * Called as a plugin is registered to the registry
-	 * @param $category String Name of category plugin was registered to
-	 * @return boolean True iff plugin initialized successfully; if false,
-	 * 	the plugin will not be registered.
+	 * @copydoc Plugin::register()
 	 */
-	function register($category, $path) {
-		$success = parent::register($category, $path);
+	function register($category, $path, $mainContextId = null) {
+		$success = parent::register($category, $path, $mainContextId);
 		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return true;
 		if ($success && $this->getEnabled()) {
 			// Insert Piwik page tag to footer
@@ -97,14 +94,6 @@ class PiwikPlugin extends GenericPlugin {
 				return new JSONMessage(true, $form->fetch($request));
 		}
 		return parent::manage($args, $request);
-	}
-
-	/**
-	 * Override the builtin to get the correct template path.
-	 * @return string
-	 */
-	function getTemplatePath() {
-		return $this->getTemplateResourceName() . ':templates/';
 	}
 
 	/**
