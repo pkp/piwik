@@ -22,8 +22,8 @@ class PiwikPlugin extends GenericPlugin {
 	 * @return boolean True iff plugin initialized successfully; if false,
 	 * 	the plugin will not be registered.
 	 */
-	function register($category, $path) {
-		$success = parent::register($category, $path);
+	function register($category, $path, $mainContextId = null) {
+		$success = parent::register($category, $path, $mainContextId);
 		if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return true;
 		if ($success && $this->getEnabled()) {
 			// Insert Piwik page tag to footer
@@ -103,8 +103,8 @@ class PiwikPlugin extends GenericPlugin {
 	 * Override the builtin to get the correct template path.
 	 * @return string
 	 */
-	function getTemplatePath() {
-		return $this->getTemplateResourceName() . ':templates/';
+	function getTemplatePath($inCore = false) {
+		return $this->getTemplateResource() . ':templates/';
 	}
 
 	/**
