@@ -110,6 +110,7 @@ class PiwikPlugin extends GenericPlugin {
 
 		$piwikSiteId = $this->getSetting($context->getId(), 'piwikSiteId');
 		$piwikUrl = $this->getSetting($context->getId(), 'piwikUrl');
+		$piwikRelativeUrl = preg_replace('/^https?:/', '', rtrim($piwikUrl, '/')) . '/';
 		if (empty($piwikSiteId) || empty($piwikUrl)) return false;
 
 		$contextPath = $context->getPath();
@@ -119,7 +120,7 @@ class PiwikPlugin extends GenericPlugin {
 			  _paq.push(['trackPageView']);
 			  _paq.push(['enableLinkTracking']);
 			  (function() {
-			    var u="//{$piwikUrl}/";
+			    var u="{$piwikRelativeUrl}";
 			    _paq.push(['setTrackerUrl', u+'piwik.php']);
 			    _paq.push(['setSiteId', {$piwikSiteId}]);
 			    _paq.push(['setDocumentTitle', "{$contextPath}"]);
