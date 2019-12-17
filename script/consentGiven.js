@@ -3,11 +3,11 @@
 // @output_file_name default.js
 // ==/ClosureCompiler==
 
-let optOutCookieName = 'ojs_consent_given';
-let optOutTTL = 0;
+let _cookieName = 'ojs_matomo_cookie';
+let _cookieTTL = 0;
 
 function disableTracking(paq, optIn) {
-    let cookie = getCookie(optOutCookieName);
+    let cookie = getCookie(_cookieName);
     if (optIn)
         paq.push(['requireConsent']);
     if (cookie === 'false') {
@@ -16,8 +16,8 @@ function disableTracking(paq, optIn) {
 }
 
 function loadBanner(upperText, lowerText, linkText, linkHref, linkColor, position, cookieTTL) {
-    optOutTTL = cookieTTL;
-    let cookie = getCookie(optOutCookieName);
+    _cookieTTL = cookieTTL;
+    let cookie = getCookie(_cookieName);
     if (cookie == null) {
         buildBannerAndListener(upperText, lowerText, linkText, linkHref, position, linkColor);
     } else {
@@ -69,12 +69,12 @@ function buildBannerAndListener(upperText, lowerText, linkText, linkHref, positi
     btn_revoke.addEventListener("click", function () {
         optOut.style.display = 'none';
         pushMatomoSettings(false);
-        setCookie(optOutCookieName, false);
+        setCookie(_cookieName, false);
     });
     btn_accept.addEventListener("click", function () {
         optOut.style.display = 'none';
         pushMatomoSettings(true);
-        setCookie(optOutCookieName, true);
+        setCookie(_cookieName, true);
     });
     window.onresize = function (event) {
         setButtonMargin(btn_revoke, btn_accept, window.innerWidth)
@@ -120,7 +120,7 @@ function setButtonMargin(btn_off, btn_on, w) {
 }
 
 /**
- * Saves the zpid consent given cookie.
+ * Saves the consent given cookie.
  * Functional required true/false option with expire date.
  * This cookie is used to save the users selection for a specific time
  *
@@ -128,9 +128,9 @@ function setButtonMargin(btn_off, btn_on, w) {
  * @param cvalue true(consent given), false (consent declined)
  */
 function setCookie(name, cvalue) {
-    if (optOutTTL > 0) {
+    if (_cookieTTL > 0) {
         let d = new Date();
-        d.setTime(d.getTime() + (optOutTTL * 24 * 60 * 60 * 1000));
+        d.setTime(d.getTime() + (_cookieTTL * 24 * 60 * 60 * 1000));
         let expires = "expires=" + d.toUTCString();
         document.cookie = name + "=" + cvalue + ";" + expires + ";path=/"
     } else
@@ -138,7 +138,7 @@ function setCookie(name, cvalue) {
 }
 
 /**
- * Loads the zpid cookie and returns its value
+ * Loads the consent cookie and returns its value
  *
  * @returns {string|null}
  */
