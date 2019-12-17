@@ -124,7 +124,8 @@ class PiwikPlugin extends GenericPlugin
         $piwikLinkHref = 'https://google.de';
         $piwikLinkcolor = 'red';
         $piwikCookieTTL = 12;
-        $piwikPosition = '';
+        $piwikPosition = 'top';
+        $piwikRequireConsent = false;
 
         $piwikRelativeUrl = preg_replace('/^https?:/', '', rtrim($piwikUrl, '/')) . '/';
         if (empty($piwikSiteId) || empty($piwikUrl)) return false;
@@ -133,7 +134,7 @@ class PiwikPlugin extends GenericPlugin
 
         $piwikCode = <<< EOF
 			var _paq = _paq || [];
-			  disableTracking(_paq, true);
+			  disableTracking(_paq, "{$piwikRequireConsent}");
 			  _paq.push(['trackPageView']);
 			  _paq.push(['enableLinkTracking']);
 			  (function() {
