@@ -15,65 +15,77 @@
 
 import('lib.pkp.classes.form.Form');
 
-class PiwikSettingsForm extends Form {
+class PiwikSettingsForm extends Form
+{
 
-	/** @var int */
-	var $_contextId;
+    /** @var int */
+    var $_contextId;
 
-	/** @var object */
-	var $_plugin;
+    /** @var object */
+    var $_plugin;
 
-	/**
-	 * Constructor
-	 * @param $plugin PiwikPlugin
-	 * @param $contextId int
-	 */
-	function __construct($plugin, $contextId) {
-		$this->_contextId = $contextId;
-		$this->_plugin = $plugin;
+    /**
+     * Constructor
+     * @param $plugin PiwikPlugin
+     * @param $contextId int
+     */
+    function __construct($plugin, $contextId)
+    {
+        $this->_contextId = $contextId;
+        $this->_plugin = $plugin;
 
-		parent::__construct($plugin->getTemplateResource('settingsForm.tpl'));
+        parent::__construct($plugin->getTemplateResource('settingsForm.tpl'));
 
-		$this->addCheck(new FormValidator($this, 'piwikSiteId', 'required', 'plugins.generic.piwik.manager.settings.piwikSiteIdRequired'));
-		$this->addCheck(new FormValidatorUrl($this, 'piwikUrl', 'required', 'plugins.generic.piwik.manager.settings.piwikUrlRequired'));
+        $this->addCheck(new FormValidator($this, 'piwikSiteId', 'required', 'plugins.generic.piwik.manager.settings.piwikSiteIdRequired'));
+        $this->addCheck(new FormValidatorUrl($this, 'piwikUrl', 'required', 'plugins.generic.piwik.manager.settings.piwikUrlRequired'));
 
-		$this->addCheck(new FormValidatorPost($this));
-		$this->addCheck(new FormValidatorCSRF($this));
-	}
+        $this->addCheck(new FormValidatorPost($this));
+        $this->addCheck(new FormValidatorCSRF($this));
+    }
 
-	/**
-	 * Initialize form data.
-	 */
-	function initData() {
-		$this->_data = array(
-			'piwikSiteId' => $this->_plugin->getSetting($this->_contextId, 'piwikSiteId'),
-			'piwikUrl' => $this->_plugin->getSetting($this->_contextId, 'piwikUrl'),
-		);
-	}
+    /**
+     * Initialize form data.
+     */
+    function initData()
+    {
+        $this->_data = array(
+            'piwikSiteId' => $this->_plugin->getSetting($this->_contextId, 'piwikSiteId'),
+            'piwikUrl' => $this->_plugin->getSetting($this->_contextId, 'piwikUrl'),
+            'piwikRequireDSGVO' => $this->_plugin->getSetting($this->_contextId, 'piwikRequireDSGVO'),
+            'piwikRequireConsent' => $this->_plugin->getSetting($this->_contextId, 'piwikRequireConsent'),
+            'piwikUpperText' => $this->_plugin->getSetting($this->_contextId, 'piwikUpperText'),
+        );
+    }
 
-	/**
-	 * Assign form data to user-submitted data.
-	 */
-	function readInputData() {
-		$this->readUserVars(array('piwikSiteId','piwikUrl'));
-	}
+    /**
+     * Assign form data to user-submitted data.
+     */
+    function readInputData()
+    {
+        $this->readUserVars(array('piwikSiteId', 'piwikUrl', 'piwikRequireDSGVO', 'piwikRequireConsent', 'piwikUpperText'));
+    }
 
-	/**
-	 * Fetch the form.
-	 * @copydoc Form::fetch()
-	 */
-	function fetch($request) {
-		$templateMgr = TemplateManager::getManager($request);
-		$templateMgr->assign('pluginName', $this->_plugin->getName());
-		return parent::fetch($request);
-	}
+    /**
+     * Fetch the form.
+     * @copydoc Form::fetch()
+     */
+    function fetch($request)
+    {
+        $templateMgr = TemplateManager::getManager($request);
+        $templateMgr->assign('pluginName', $this->_plugin->getName());
+        return parent::fetch($request);
+    }
 
-	/**
-	 * Save settings.
-	 */
-	function execute() {
-		$this->_plugin->updateSetting($this->_contextId, 'piwikSiteId', $this->getData('piwikSiteId'), 'int');
-		$this->_plugin->updateSetting($this->_contextId, 'piwikUrl', trim($this->getData('piwikUrl'), "\"\';"), 'string');
-	}
+    /**
+     * Save settings.
+     */
+    function execute()
+    {
+        $this->_plugin->updateSetting($this->_contextId, 'piwikSiteId', $this->getData('piwikSiteId'), 'int');
+        $this->_plugin->updateSetting($this->_contextId, 'piwikUrl', trim($this->getData('piwikUrl'), "\"\';"), 'string');
+        $this->_plugin->updateSetting($this->_contextId, 'piwikRequireDSGVO', $this->getData('piwikRequireDSGVO'), 'int');
+        $this->_plugin->updateSetting($this->_contextId, 'piwikRequireConsent', $this->getData('piwikRequireConsent'), 'int');
+        $this->_plugin->updateSetting($this->_contextId, 'piwikUpperText', $this->getData('piwikUpperText'), 'string');
+    }
 }
 
