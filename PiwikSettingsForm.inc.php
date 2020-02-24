@@ -53,7 +53,7 @@ class PiwikSettingsForm extends Form
             'piwikUrl' => $this->_plugin->getSetting($this->_contextId, 'piwikUrl'),
             'piwikRequireDSGVO' => $this->_plugin->getSetting($this->_contextId, 'piwikRequireDSGVO'),
             'piwikRequireConsent' => $this->_plugin->getSetting($this->_contextId, 'piwikRequireConsent'),
-            'piwikUpperText' => $this->_plugin->getSetting($this->_contextId, 'piwikUpperText'),
+            'piwikBannerContent' => $this->_plugin->getSetting($this->_contextId, 'piwikBannerContent'),
         );
     }
 
@@ -62,7 +62,7 @@ class PiwikSettingsForm extends Form
      */
     function readInputData()
     {
-        $this->readUserVars(array('piwikSiteId', 'piwikUrl', 'piwikRequireDSGVO', 'piwikRequireConsent', 'piwikUpperText'));
+        $this->readUserVars(array('piwikSiteId', 'piwikUrl', 'piwikRequireDSGVO', 'piwikRequireConsent', 'piwikBannerContent'));
     }
 
     /**
@@ -85,7 +85,7 @@ class PiwikSettingsForm extends Form
         $this->_plugin->updateSetting($this->_contextId, 'piwikUrl', trim($this->getData('piwikUrl'), "\"\';"), 'string');
         $this->_plugin->updateSetting($this->_contextId, 'piwikRequireDSGVO', $this->getData('piwikRequireDSGVO'), 'int');
         $this->_plugin->updateSetting($this->_contextId, 'piwikRequireConsent', $this->getData('piwikRequireConsent'), 'int');
-        $this->_plugin->updateSetting($this->_contextId, 'piwikUpperText', $this->getData('piwikUpperText'), 'string');
+        $this->_plugin->updateSetting($this->_contextId, 'piwikBannerContent', $this->getData('piwikBannerContent'), 'string');
     }
 }
 
