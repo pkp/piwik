@@ -115,56 +115,21 @@ class PiwikPlugin extends GenericPlugin
         if (!$context) return false;
         $router = $request->getRouter();
         if (!is_a($router, 'PKPPageRouter')) return false;
-
         $piwikSiteId = $this->getSetting($context->getId(), 'piwikSiteId');
         $piwikUrl = $this->getSetting($context->getId(), 'piwikUrl');
-
         $piwikRequireDSGVO = $this->getSetting($context->getId(), 'piwikRequireDSGVO') == null ? 0 : $this->getSetting($context->getId(), 'piwikRequireDSGVO');
         $piwikRequireConsent = $this->getSetting($context->getId(), 'piwikRequireConsent') == null ? 0 : $this->getSetting($context->getId(), 'piwikRequireConsent');
-        $piwikUpperText = $this->getSetting($context->getId(), 'piwikUpperText');
-        $piwikLowerText = 'Lorem Ipsum';
-        $piwikLinkText = 'This is a link';
-        $piwikLinkHref = 'https://google.de';
+        $piwikBannerContent = $this->getSetting($context->getId(), 'piwikBannerContent');
         $piwikLinkcolor = 'red';
-        $piwikCookieTTL = 12;
-        $piwikPosition = 'top';
-
-
+        $piwikCookieTTL = 2;
+        $piwikPosition = 'bottom';
         $piwikRelativeUrl = preg_replace('/^https?:/', '', rtrim($piwikUrl, '/')) . '/';
         if (empty($piwikSiteId) || empty($piwikUrl)) return false;
-
         $contextPath = $context->getPath();
         $templateMgr = TemplateManager::getManager($request);
-
-        $piwikCode = <<< EOF
-			var _paq = _paq || [];
-			  if({$piwikRequireDSGVO}===1)
-			    disableTracking(_paq, {$piwikRequireConsent}===1);
-			  _paq.push(['trackPageView']);
-			  _paq.push(['enableLinkTracking']);
-			  (function() {
-			    var u="{$piwikRelativeUrl}";
-			    _paq.push(['setTrackerUrl', u+'piwik.php']);
-			    _paq.push(['setSiteId', {$piwikSiteId}]);
-			    _paq.push(['setDocumentTitle', "{$contextPath}"]);
-			    var d=document, g=d.createElement('script'), s=d.getElementsByTagName('script')[0];
-			    g.type='text/javascript'; g.async=true; g.defer=true; g.src=u+'piwik.js'; s.parentNode.insertBefore(g,s);
-			  })();
-			  if({$piwikRequireDSGVO}===1)
-			    loadBanner("{$piwikUpperText}", "{$piwikLowerText}", "{$piwikLinkText}", "{$piwikLinkHref}", "{$piwikLinkcolor}","{$piwikPosition}", "{$piwikCookieTTL}");
-EOF;
-
-        if ($piwikRequireDSGVO == 1)
-            $templateMgr->addJavaScript('matomoConsent', $request->getBaseUrl() . '/' . $this->getPluginPath() . '/script/consentGiven.js');
-        $templateMgr->addJavaScript(
-            'piwik',
-            $piwikCode,
-            array(
-                'priority' => STYLE_SEQUENCE_LAST,
-                'inline' => true,
-            )
-        );
-
+        $mtmSettings = "var mtm_setting = {'requireDSGVO':'{$piwikRequireDSGVO}','requireConsent':'{$piwikRequireConsent}','bannerContent':'{$piwikBannerContent}','relativeUrl':'{$piwikRelativeUrl}','siteId':'{$piwikSiteId}','contextPath':'{$contextPath}','linkColor':'{$piwikLinkcolor}','position':'{$piwikPosition}','cookieTTL':'{$piwikCookieTTL}'}";
+        $templateMgr->addJavaScript('piwik', $mtmSettings, array('priority' => STYLE_SEQUENCE_LAST, 'inline' => true,));
+        $templateMgr->addJavaScript('matomoConsent', $request->getBaseUrl() . '/' . $this->getPluginPath() . '/script/consentGiven.js', array('priority' => STYLE_SEQUENCE_LAST));
         return false;
     }
 

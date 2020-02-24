@@ -3,31 +3,53 @@
 // @output_file_name default.js
 // ==/ClosureCompiler==
 
-let _cookieName = 'ojs_matomo_cookie';
-let _cookieTTL = 0;
-
-function disableTracking(paq, optIn) {
-    let cookie = getCookie(_cookieName);
-    if (optIn)
-        paq.push(['requireConsent']);
-    if (cookie === 'false') {
-        paq.push(['disableCookies']);
-    }
+// get mtm_settings or create default object
+var mtm_setting = mtm_setting || {
+    'requireDSGVO': '0',
+    'requireConsent': '0',
+    'bannerContent': '',
+    'relativeUrl': '',
+    'siteId': '',
+    'contextPath': '',
+    'linkColor': '',
+    'position': '',
+    'cookieTTL': ''
+};
+// matomo _paq array
+var _paq = _paq || [];
+// name of the plugin cookie
+let _cookieName = 'OJSMTM';
+// cookie time to live
+let _cookieTTL = mtm_setting.cookieTTL;
+let cookie = getCookie(_cookieName);
+// opt-in settings: consent required enabled and push consent if cookie content === "true"
+if (mtm_setting.requireDSGVO === '1' && mtm_setting.requireConsent === '1') {
+    _paq.push(['requireConsent']);
+    if (cookie != null)
+        pushMatomoSettings(cookie === 'true');
 }
+// build banner if GDPR is enabled and no cookie available
+if (cookie == null && mtm_setting.requireDSGVO === '1')
+    buildBannerAndListener(mtm_setting.bannerContent, mtm_setting.position, mtm_setting.linkColor);
 
-function loadBanner(upperText, lowerText, linkText, linkHref, linkColor, position, cookieTTL) {
-    _cookieTTL = cookieTTL;
-    let cookie = getCookie(_cookieName);
-    if (cookie == null) {
-        buildBannerAndListener(upperText, lowerText, linkText, linkHref, position, linkColor);
-    } else {
-        pushMatomoSettings((cookie === 'true'));
-    }
-}
+_paq.push(['trackPageView']);
+_paq.push(['enableLinkTracking']);
+(function () {
+    var u = mtm_setting.relativeUrl;
+    _paq.push(['setTrackerUrl', u + 'matomo.php']);
+    _paq.push(['setSiteId', mtm_setting.siteId]);
+    _paq.push(['setDocumentTitle', mtm_setting.contextPath]);
+    var d = document, g = d.createElement('script'), s = d.getElementsByTagName('script')[0];
+    g.type = 'text/javascript';
+    g.async = true;
+    g.defer = true;
+    g.src = u + 'matomo.js';
+    s.parentNode.insertBefore(g, s);
+})();
 
-function buildBannerAndListener(upperText, lowerText, linkText, linkHref, position, linkColor) {
+function buildBannerAndListener(bannerContent, position, linkColor) {
     let optOut = document.createElement("div");
-    optOut.id = "optout-form";
+    optOut.id = "mtm-form";
     optOut.style.position = 'fixed';
     optOut.style.minWidth = '100%';
     if (position === 'top')
@@ -41,18 +63,14 @@ function buildBannerAndListener(upperText, lowerText, linkText, linkHref, positi
     optOut.style.backgroundColor = 'rgba(0,0,0,0.8)';
     optOut.style.zIndex = '100000';
     let paragraph = document.createElement("p");
-    paragraph.innerHTML = upperText;
-    paragraph.innerHTML += "<br />";
-    paragraph.innerHTML += lowerText;
-    paragraph.innerHTML += "<br />";
-    let link = document.createElement("a");
-    link.href = linkHref;
-    link.target = '_blank';
-    link.innerText = linkText;
-    link.style.color = linkColor;
-    link.style.fontWeight = 'bold';
-    link.style.textDecoration = 'none';
-    paragraph.append(link);
+    paragraph.innerHTML = bannerContent;
+    let link = paragraph.querySelector("a");
+    if (link) {
+        link.target = '_blank';
+        link.style.color = linkColor;
+        link.style.fontWeight = 'bold';
+        link.style.textDecoration = 'none';
+    }
     optOut.append(paragraph);
     paragraph = document.createElement("p");
     let btn_revoke = document.createElement("button");
@@ -76,7 +94,7 @@ function buildBannerAndListener(upperText, lowerText, linkText, linkHref, positi
         pushMatomoSettings(true);
         setCookie(_cookieName, true);
     });
-    window.onresize = function (event) {
+    window.onresize = function () {
         setButtonMargin(btn_revoke, btn_accept, window.innerWidth)
     }
 }
@@ -163,6 +181,7 @@ function getCookie(name) {
  * @param enabled true(consent given), false (consent declined)
  */
 function pushMatomoSettings(enabled) {
-    if (enabled)
+    if (enabled) {
         _paq.push(['setConsentGiven']);
+    }
 }

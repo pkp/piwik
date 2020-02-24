@@ -10,11 +10,7 @@
  *}
 <div id="piwikSettings">
     <div id="description">{translate key="plugins.generic.piwik.manager.settings.description"}</div>
-
-    <div class="separator"></div>
-
     <br/>
-
     <script>
         $(function () {ldelim}
             // Attach the form handler.
@@ -24,29 +20,28 @@
     <form class="pkp_form" id="piwikSettingsForm" method="post"
           action="{url router=$smarty.const.ROUTE_COMPONENT op="manage" category="generic" plugin=$pluginName verb="settings" save=true}">
         {csrf}
-
         {fbvFormArea id="piwikSettingsFormArea"}
-            {fbvFormSection for="piwikUrl" title="plugins.generic.piwik.manager.settings.piwikUrl" description="plugins.generic.piwik.manager.settings.piwikUrlInstructions"}
+            {fbvFormSection for="piwikUrl" label="plugins.generic.piwik.manager.settings.piwikUrl" description="plugins.generic.piwik.manager.settings.piwikUrlInstructions"}
                 {fbvElement type="text" id="piwikUrl" name="piwikUrl" value=$piwikUrl label="plugins.generic.piwik.manager.settings.piwikUrl" required=true}
             {/fbvFormSection}
-
-            {fbvFormSection for="piwikSiteId" title="plugins.generic.piwik.manager.settings.piwikSiteId" description="plugins.generic.piwik.manager.settings.piwikSiteIdInstructions"}
+            {fbvFormSection for="piwikSiteId" label="plugins.generic.piwik.manager.settings.piwikSiteId" description="plugins.generic.piwik.manager.settings.piwikSiteIdInstructions"}
                 {fbvElement type="text" id="piwikSiteId" name="piwikSiteId" value=$piwikSiteId label="plugins.generic.piwik.manager.settings.piwikSiteId" required=true}
             {/fbvFormSection}
         {/fbvFormArea}
         {fbvFormArea id="piwikDsgvoSettings" title="plugins.generic.piwik.manager.settings.piwikDsgvoSettings"}
-            {fbvFormSection for="piwikRequireDSGVO" list=true title="plugins.generic.piwik.manager.settings.piwikRequireDSGVO" description="plugins.generic.piwik.manager.settings.piwikRequireDSGVO.desc"}
-                {fbvElement type="checkbox" id="piwikRequireDSGVO" name="piwikRequireDSGVO" value="1" checked=$piwikRequireDSGVO label="plugins.generic.piwik.manager.settings.piwikRequireDSGVO"}
+            <div id="dsgvo_description">{translate key="plugins.generic.piwik.manager.settings.piwikDsgvoSettings.desc"}</div>
+            <br/>
+            {fbvFormSection for="piwikRequireDSGVO" list=true label="plugins.generic.piwik.manager.settings.piwikRequireDSGVO" description="plugins.generic.piwik.manager.settings.piwikRequireDSGVO.desc"}
+                {fbvElement type="checkbox" id="piwikRequireDSGVO" name="piwikRequireDSGVO" value="1" checked=$piwikRequireDSGVO label="plugins.generic.piwik.manager.settings.piwikRequireDSGVO.check"}
             {/fbvFormSection}
             {fbvFormSection for="piwikRequireConsent" list=true title="plugins.generic.piwik.manager.settings.piwikRequireConsent" description="plugins.generic.piwik.manager.settings.piwikRequireConsent.desc"}
                 {fbvElement type="checkbox" id="piwikRequireConsent" name="piwikRequireConsent" value="1" checked=$piwikRequireConsent label="plugins.generic.piwik.manager.settings.piwikRequireConsent"}
             {/fbvFormSection}
-            {fbvFormSection for="piwikUpperText" title="plugins.generic.piwik.manager.settings.piwikUpperText" description="plugins.generic.piwik.manager.settings.piwikUpperText.desc"}
-                {fbvElement type="text" id="piwikUpperText" name="piwikUpperText" value=$piwikUpperText label="plugins.generic.piwik.manager.settings.piwikUpperText"}
+            {fbvFormSection for="piwikBannerContent" label="plugins.generic.piwik.manager.settings.piwikBannerContent" description="plugins.generic.piwik.manager.settings.piwikBannerContent.desc"}
+                {fbvElement type="textarea" name="piwikBannerContent" id="piwikBannerContent" value=$piwikBannerContent rich=true height=$fbvStyles.height.TALL}
             {/fbvFormSection}
         {/fbvFormArea}
         {fbvFormButtons}
     </form>
-
     <p><span class="formRequired">{translate key="common.requiredField"}</span></p>
 </div>
