@@ -1,0 +1,43 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-02-25T15:06:39+00:00\n"
+"PO-Revision-Date: 2020-02-25T15:06:39+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.piwik.displayName"
+msgstr "Mòdul Piwik"
+
+msgid "plugins.generic.piwik.description"
+msgstr ""
+"Integra OJS amb Piwik, una aplicació web desenvolupada como programari lliure, per a l'anàlisi del trànsit d'un lloc web. Es necessari que Piwik estigui instal·lat prèviament al servidor.\n"
+"Si us plau, visita el lloc de <a href=\"http://piwik.org/\" title=\"piwik site\">Piwik</a> per a més informació."
+
+msgid "plugins.generic.piwik.manager.settings.description"
+msgstr ""
+"A l'activar aquest mòdul, Piwiki podrà recol·lectar i analitzar les dades d'us i trànsit del web de la revista.  Es necessari que Piwik estigui instal·lat prèviament al servidor.\n"
+"Si us plau, visita el lloc de <a href=\"http://piwik.org/\" title=\"piwik site\">Piwik</a> per a més informació."
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrl"
+msgstr "URL de Piwik"
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlInstructions"
+msgstr "L'adreça URL completa de la teva instal·lació Piwik (p.e: http://myserver.net/piwik)."
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlRequired"
+msgstr "Si us plau, introdueix una URL vàlida. Inclou http:// al començament."
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteId"
+msgstr "ID del perfil del lloc"
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdInstructions"
+msgstr "A Piwik, fes clic a Settings -> Websites. L'ID es mostra al costat del nom del perfil del lloc."
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdRequired"
+msgstr "Si us plau, entra l'ID del perfil del lloc"

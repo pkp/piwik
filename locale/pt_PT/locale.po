@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-02-25T15:06:39+00:00\n"
+"PO-Revision-Date: 2020-02-25T15:06:39+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.piwik.displayName"
+msgstr "Plugin Piwik"
+
+msgid "plugins.generic.piwik.description"
+msgstr "Integra o OJS com o Piwik, uma aplicação gratuita e em open source de análise de tráfego de sites. É necessário o Piwik estar instalado. Ver mais informação no <a href=\"http://piwik.org/\" title=\"piwik site\">site Piwik</a>."
+
+msgid "plugins.generic.piwik.manager.settings.description"
+msgstr "<p>Com este plugin ativado, o Piwik pode ser utilizado para recolher e analisar o tráfego e uso do site para esta revista. Note que este plugin requer que o Piwik já esteja previamente instalado. Para mais informações visite o <a href=\"http://piwik.org/\" title=\"Piwik site\">site Piwik</a>.</p>"
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrl"
+msgstr "URL Piwik"
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlInstructions"
+msgstr "O URL completo para a sua instalação Piwik (i.e. http://myserver.net/piwik)."
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlRequired"
+msgstr "Insira um URL válido. Inclua http:// no início."
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteId"
+msgstr "ID do perfil do site"
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdInstructions"
+msgstr "Dentro do Piwik, clique me Configurações -> Websites. O ID de perfil de site é exibido junto ao seu nome de perfil de site."
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdRequired"
+msgstr "Insir um ID de perfil de site."

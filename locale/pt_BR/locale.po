@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-02-25T15:06:39+00:00\n"
+"PO-Revision-Date: 2020-02-25T15:06:39+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.piwik.displayName"
+msgstr "Plugin Piwik"
+
+msgid "plugins.generic.piwik.description"
+msgstr "Integre o sistema com o Piwik, uma ferramenta livre e gratuita de análise de tráfego web. Exige a instalação prévia do Piwik. Saiba mais em <a href=\"http://www.piwik.org/\" title=\"Site do Piwik\">Piwik</a>."
+
+msgid "plugins.generic.piwik.manager.settings.description"
+msgstr "<p>Com este plugin habilitado, o Piwik pode ser usado para coletar informações e analisar o tráfego de uso do portal para esta revista. O plugin exige a instalação prévia do Piwik. Saiba mais em <a href=\"http://www.piwik.org/\" title=\"Site do Piwik\">Piwik</a>.</p>"
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrl"
+msgstr "URL Piwik"
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlInstructions"
+msgstr "A URL completa da instalação do Piwik (ex.: http://myserver.net/piwik)."
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlRequired"
+msgstr "Informe uma URL válida. Inclua o protocolo http:// no início."
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteId"
+msgstr "ID do perfil do portal"
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdInstructions"
+msgstr "Dentro do Piwik, clique em Configurações -> Websites (Settings -> Websites). O ID do perfil do portal é exibido ao lado do seu nome.>"
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdRequired"
+msgstr "Informe o ID do perfil do portal."

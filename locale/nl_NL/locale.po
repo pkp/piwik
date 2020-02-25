@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-02-25T15:06:39+00:00\n"
+"PO-Revision-Date: 2020-02-25T15:06:39+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.piwik.displayName"
+msgstr "Piwik Plugin"
+
+msgid "plugins.generic.piwik.description"
+msgstr "Integreer OJS met Piwik, een gratis open source applicatie voor het analyseren van websitegebruik. Vereist dat Piwik al geïnstallleerd is. Zie de <a href=\"http://piwik.org/\" title=\"piwik site\">Piwik site</a> voor meer informatie."
+
+msgid "plugins.generic.piwik.manager.settings.description"
+msgstr "<p>Als deze plugin ingeschakeld is kan Piwik gebruikt worden voor het verzamelen en analyseren van het gebruik van de website en verkeer voor dit tijdschrift. Deze plugin vereist dat Piwik reeds geïnstalleerd is. Zie de <a href=\"http://piwik.org/\" title=\"Piwik site\">Piwik site</a> voor meer informatie.</p>"
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrl"
+msgstr "Piwik Url"
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlInstructions"
+msgstr "De volledige url van uw Piwik installatie (bv. http://myserver.net/piwik)."
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlRequired"
+msgstr "Geef een geldige url, inclusief http:// aan het begin"
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteId"
+msgstr "Site profile ID"
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdInstructions"
+msgstr "Klik in Piwik op Settings -> Websites. Het site profile ID staat naast uw site profile name."
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdRequired"
+msgstr "Geef een site profile ID."

@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-02-25T15:06:39+00:00\n"
+"PO-Revision-Date: 2020-02-25T15:06:39+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.piwik.displayName"
+msgstr "Piwik 插件"
+
+msgid "plugins.generic.piwik.description"
+msgstr "OJS和Piwik兼容，一个免费和开源网站流量分析应用。条件是已安装Piwik插件。更多信息详见<a href=\"http://piwik.org/\" title=\"piwik site\">Piwik 网站</a>。"
+
+msgid "plugins.generic.piwik.manager.settings.description"
+msgstr "<p>该款插件启用Piwik收集和分析期刊试用情况的功能。但请注意，前提是已安装Piwik插件。更多信息详见<a href=\"http://piwik.org/\" title=\"Piwik site\">Piwik site</a></p>"
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrl"
+msgstr "Piwik 网址"
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlInstructions"
+msgstr "Piwik安装的完整网址 (如. http://myserver.net/piwik)."
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlRequired"
+msgstr "请输入一个有效的网址。包括 http://开头。"
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteId"
+msgstr "网站配置ID"
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdInstructions"
+msgstr "在Piwik，点击设置->网站。在网站配置名称旁就是配置的ID。"
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdRequired"
+msgstr "请输入一个网站配置ID"

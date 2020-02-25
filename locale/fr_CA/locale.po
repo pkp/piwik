@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-02-25T15:06:39+00:00\n"
+"PO-Revision-Date: 2020-02-25T15:06:39+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.piwik.displayName"
+msgstr "Plugiciel Piwik"
+
+msgid "plugins.generic.piwik.description"
+msgstr "Intégrez OJS avec Piwik, une application gratuite et en accès libre qui analyse le trafic d'un site web. Cela requiert que Piwik soit déjà installé. Veuillez regarder le <a href=\"http://piwik.org/\" title=\"piwik site\">site Piwik</a> pour de plus amples informations."
+
+msgid "plugins.generic.piwik.manager.settings.description"
+msgstr "<p>Avec ce plugiciel activé, Piwik peut être utilisé pour recueillir et analyser des données d'utilisation et de fréquentation pour cette revue. Veuillez noter que cela requiert que Piwik soit déjà installé. Veuillez regarder le <a href=\"http://piwik.org/\" title=\"piwik site\">site Piwik</a> pour de plus amples informations.</p>"
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrl"
+msgstr "Url Piwik"
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlInstructions"
+msgstr "L'URL complète à votre installation Piwik (i.e. http://myserver.net/piwik)."
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlRequired"
+msgstr "Veuillez entrer une URL valide. Inclure http:// au début."
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteId"
+msgstr "ID du profil du site"
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdInstructions"
+msgstr "Dans Piwik, cliquez sur Paramètres -> Sites internet. L'ID du profil du site est affiché à côté de votre nom de profil sur le site."
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdRequired"
+msgstr "Veuillez entrer un ID de profil de site."

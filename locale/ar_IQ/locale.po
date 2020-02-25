@@ -1,0 +1,39 @@
+msgid ""
+msgstr ""
+"Project-Id-Version: \n"
+"Report-Msgid-Bugs-To: \n"
+"Last-Translator: \n"
+"Language-Team: \n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"POT-Creation-Date: 2020-02-25T15:06:39+00:00\n"
+"PO-Revision-Date: 2020-02-25T15:06:39+00:00\n"
+"Language: \n"
+
+msgid "plugins.generic.piwik.displayName"
+msgstr "إضافة Piwik"
+
+msgid "plugins.generic.piwik.description"
+msgstr "مكاملة نظام المجلات المفتوحة مع Piwik، وهي تطبيق مجاني مفتوح المصدر لتحليل حركة المرور الخاصة بموقع ما. يتطلب الأمر التنصيب المسبق لـ Piwik. لطفاً، راجع رابط <a href=\"http://piwik.org/\" title=\"موقع piwik\">موقع Piwik</a> للمزيد من المعلومات."
+
+msgid "plugins.generic.piwik.manager.settings.description"
+msgstr "<p>مع تمكين هذه الإضافة، Piwik تستعمل لتجميع وتحليل بيانات استعمال موقع المجلة وحركة المرور إليه. لطفاً، لاحظ أن هذه الإضافة تتطلب التنصيب المسبق لـ Piwik. لطفاً، أنظر <a href=\"http://piwik.org/\" title=\"موقع Piwik\">موقع Piwik</a> للمزيد من المعلومات.</p>"
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrl"
+msgstr "رابط Piwik"
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlInstructions"
+msgstr "الرابط الكامل لتنصيبك من Piwik (أي: http://myserver.net/piwik)."
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlRequired"
+msgstr "لطفاً، أدخل رابطاً صحيحاً. متضمناً http:// في مقدمته."
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteId"
+msgstr "رمز ملف الموقع"
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdInstructions"
+msgstr "ضمن Piwik، أنقر على إعدادات -> المواقع. إن رمز ملف الموقع معروض بجوار اسم ملف موقعك."
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdRequired"
+msgstr "لطفاً، أدخل رمز تعريف ملف موقعك."
