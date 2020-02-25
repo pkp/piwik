@@ -12,28 +12,40 @@
   -->
  
 <locale name="en_US" full_name="U.S. English">
-
-	<!-- Piwik -->
-	<message key="plugins.generic.piwik.displayName">Piwik Plugin</message>
-	<message key="plugins.generic.piwik.description"><![CDATA[Integrate OJS with Piwik, a free and open source web site traffic analysis application. Requires that Piwik is already installed. Please see the <a href="http://piwik.org/" title="piwik site">Piwik site</a> for more information.]]></message>
-
-	<!-- Piwik Settings Management -->
-	<message key="plugins.generic.piwik.manager.settings.description"><![CDATA[<p>With this plugin enabled Piwik may be used to collect and analyze web site usage and traffic for this journal. Please note that this plugin requires that Piwik is already installed. Please see the <a href="http://piwik.org/" title="Piwik site">Piwik site</a> for more information.</p>]]></message>
-	<message key="plugins.generic.piwik.manager.settings.piwikUrl">Piwik Url</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikUrlInstructions">The full url to your Piwik installation (i.e. http://myserver.net/piwik).</message>
+	<!-- Matomo -->
+	<message key="plugins.generic.piwik.displayName">Matomo Plugin</message>
+	<message key="plugins.generic.piwik.description"><![CDATA[Integrate OJS with Matomo, a free and open source web site traffic analysis application. Requires that Matomo is already installed. Please see the <a href="http://matomo.org/" title="matomo site">Matomo site</a> for more information.]]></message>
+	<!-- Matomo Settings Management -->
+	<message key="plugins.generic.piwik.manager.settings.description"><![CDATA[<p>With this plugin enabled Matomo may be used to collect and analyze web site usage and traffic for this journal. Please note that this plugin requires that Matomo is already installed. Please see the <a href="http://piwik.org/" title="Matomo site">Matomo site</a> for more information.</p>]]></message>
+	<message key="plugins.generic.piwik.manager.settings.piwikUrl">Matomo Url</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikUrlInstructions">The full url to your Matomo installation (i.e. http://myserver.net/piwik).</message>
 	<message key="plugins.generic.piwik.manager.settings.piwikUrlRequired">Please enter a valid url. Include http:// at the start.</message>
 	<message key="plugins.generic.piwik.manager.settings.piwikSiteId">Site profile ID</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdInstructions">Within Piwik, click on Settings -> Websites. The site profile ID is displayed next to your site profile name.</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdInstructions">Within Matomo, click on Settings -> Websites. The site profile ID is displayed next to your site profile name.</message>
 	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdRequired">Please enter a site profile ID.</message>
-	<!-- Piwik GDPR Extension -->
-	<message key="plugins.generic.piwik.manager.settings.piwikDsgvoSettings">Matomo/Piwik GDPR Settings</message>
+	<!-- Matomo GDPR Extension -->
+	<message key="plugins.generic.piwik.manager.settings.piwikDsgvoSettings">Matomo GDPR Settings</message>
 	<message key="plugins.generic.piwik.manager.settings.piwikDsgvoSettings.desc">The following settings allow a GDPR-compliant use of Matomo Tracking.</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikRequireDSGVO">GDPR conform Tracking</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikRequireDSGVO.desc">This option enables GDPR compliant tracking.</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikRequireDSGVO.check">Enable GDPR conform Tracking</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikRequireConsent"></message>
-	<message key="plugins.generic.piwik.manager.settings.piwikRequireConsent"></message>
-	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdRequired"></message>
-	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdRequired"></message>
-	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdRequired"></message>
+	<message key="plugins.generic.piwik.manager.settings.piwikDSGVO">GDPR conform Tracking</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikDSGVO.desc">This option enables GDPR compliant tracking.</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikRequireDSGVO">Enable GDPR conform Tracking</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikRequireConsent"><![CDATA[Enable Require Consent <strong>(recommended)</strong>]]></message>
+	<message key="plugins.generic.piwik.manager.settings.piwikDisableCookies"><![CDATA[Enable Cookie free tracking <strong>(recommended)</strong>]]></message>
+	<message key="plugins.generic.piwik.manager.settings.piwikCookieTTL">Cookie Lifetime</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikCookieTTL.desc">Lorem ipsum</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikPosition">Banner Position</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikPosition.desc">Lorem ipsum</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikPosition.top">Top</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikPosition.bottom">Bottom</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikBannerContent">Banner Content</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikBannerContent.desc">Lorem ipsum</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikLinkColor">Link Color</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikLinkColor.desc">Lorem ipsum</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikAcceptBtn">Accept Button Text and Style</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikAcceptBtn.desc">Lorem ipsum</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikBtnTxt">Button Text</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikBtnColor">Font Color</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikBtnBGColor">Background Color</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikDeclineBtn">Decline Button Text and Style</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikDeclineBtn.desc">Lorem ipsum</message>
 </locale>

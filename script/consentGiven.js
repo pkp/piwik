@@ -13,7 +13,14 @@ var mtm_setting = mtm_setting || {
     'contextPath': '',
     'linkColor': '',
     'position': '',
-    'cookieTTL': ''
+    'cookieTTL': '',
+    'disableCookies': '0',
+    'acceptBtnTxt': 'Accept',
+    'acceptBtnColor': '#fff',
+    'acceptBtnBGColor': 'green',
+    'declineBtnTxt': 'Decline',
+    'declineBtnColor': '#ffffff',
+    'declineBtnBGColor': '#808080'
 };
 // matomo _paq array
 var _paq = _paq || [];
@@ -22,16 +29,20 @@ let _cookieName = 'OJSMTM';
 // cookie time to live
 let _cookieTTL = mtm_setting.cookieTTL;
 let cookie = getCookie(_cookieName);
-// opt-in settings: consent required enabled and push consent if cookie content === "true"
-if (mtm_setting.requireDSGVO === '1' && mtm_setting.requireConsent === '1') {
-    _paq.push(['requireConsent']);
-    if (cookie != null)
-        pushMatomoSettings(cookie === 'true');
+if (mtm_setting.requireDSGVO === '1') {
+    if (mtm_setting.disableCookies === '1') {
+        _paq.push(['disableCookies']);
+    }
+    // opt-in settings: consent required enabled and push consent if cookie content === "true"
+    if (mtm_setting.requireConsent === '1') {
+        _paq.push(['requireConsent']);
+        if (cookie != null)
+            pushMatomoSettings(cookie === 'true');
+    }
+    // build banner if GDPR is enabled and no cookie available
+    if (cookie == null)
+        buildBannerAndListener();
 }
-// build banner if GDPR is enabled and no cookie available
-if (cookie == null && mtm_setting.requireDSGVO === '1')
-    buildBannerAndListener(mtm_setting.bannerContent, mtm_setting.position, mtm_setting.linkColor);
-
 _paq.push(['trackPageView']);
 _paq.push(['enableLinkTracking']);
 (function () {
@@ -47,12 +58,12 @@ _paq.push(['enableLinkTracking']);
     s.parentNode.insertBefore(g, s);
 })();
 
-function buildBannerAndListener(bannerContent, position, linkColor) {
+function buildBannerAndListener(linkColor) {
     let optOut = document.createElement("div");
     optOut.id = "mtm-form";
     optOut.style.position = 'fixed';
     optOut.style.minWidth = '100%';
-    if (position === 'top')
+    if (mtm_setting.position === 'top')
         optOut.style.top = '0';
     else
         optOut.style.bottom = '0';
@@ -63,24 +74,24 @@ function buildBannerAndListener(bannerContent, position, linkColor) {
     optOut.style.backgroundColor = 'rgba(0,0,0,0.8)';
     optOut.style.zIndex = '100000';
     let paragraph = document.createElement("p");
-    paragraph.innerHTML = bannerContent;
+    paragraph.innerHTML = mtm_setting.bannerContent;
     let link = paragraph.querySelector("a");
     if (link) {
         link.target = '_blank';
-        link.style.color = linkColor;
+        link.style.color = mtm_setting.linkColor;
         link.style.fontWeight = 'bold';
         link.style.textDecoration = 'none';
     }
     optOut.append(paragraph);
     paragraph = document.createElement("p");
     let btn_revoke = document.createElement("button");
-    btn_revoke.innerHTML = 'Decline Tracking';
+    btn_revoke.innerHTML = mtm_setting.declineBtnTxt;
     paragraph.append(btn_revoke);
     let btn_accept = document.createElement("button");
-    btn_accept.innerHTML = 'Accept Cookies';
+    btn_accept.innerHTML = mtm_setting.acceptBtnTxt;
     setButtonMargin(btn_revoke, btn_accept, window.innerWidth);
-    styleButton(btn_accept, 'green');
-    styleButton(btn_revoke, 'gray');
+    styleButton(btn_accept, mtm_setting.acceptBtnBGColor, mtm_setting.acceptBtnColor);
+    styleButton(btn_revoke, mtm_setting.declineBtnBGColor, mtm_setting.declineBtnColor);
     paragraph.append(btn_accept);
     optOut.append(paragraph);
     document.body.append(optOut);
@@ -106,12 +117,12 @@ function buildBannerAndListener(bannerContent, position, linkColor) {
  * @param btn button
  * @param bgColor Background Color
  */
-function styleButton(btn, bgColor) {
+function styleButton(btn, bgColor, color) {
     btn.style.backgroundColor = bgColor;
     btn.style.border = 'none';
     btn.style.padding = '10px 20px';
     btn.style.borderRadius = '5px';
-    btn.style.color = 'white';
+    btn.style.color = color;
     btn.style.cursor = 'pointer';
 }
 
@@ -183,5 +194,7 @@ function getCookie(name) {
 function pushMatomoSettings(enabled) {
     if (enabled) {
         _paq.push(['setConsentGiven']);
+    } else {
+        _paq.push(['optUserOut']);
     }
 }

@@ -7,23 +7,45 @@
   * Copyright (c) 2013-2019 Simon Fraser University
   * Copyright (c) 2003-2019 John Willinsky
   * Distributed under the GNU GPL v2. For full terms see the file docs/COPYING.
-  * Piwik plugin localization strings for the de_DE (Deutsch (Deutschland)) locale.
+  * Matomo plugin localization strings for the de_DE (Deutsch (Deutschland)) locale.
   * Please contact Marco Tullney, marco.tullney@fu-berlin.de, with any questions regarding this translation.
   -->
- 
+
 <locale name="de_DE" full_name="Deutsch (Deutschland)">
-
-	<!-- Piwik -->
-	<message key="plugins.generic.piwik.displayName">Piwik-Plug-In</message>
-	<message key="plugins.generic.piwik.description"><![CDATA[Kombiniert OJS mit Piwik, einer freien und quelloffenen Anwendung zur Analyse des Website-Traffics. Erfordert, dass Piwik bereits installiert ist. Bitte konsultieren Sie die  <a href="http://piwik.org/" title="piwik site">Piwik-Seite</a> für mehr Informationen.]]></message>
-
-	<!-- Piwik Settings Management -->
-	<message key="plugins.generic.piwik.manager.settings.description"><![CDATA[<p>Wenn dieses Plug-In aktiviert ist, kann Piwik benutzt werden, um Nutzung und Traffic für diese Zeitschrift zu sammeln und zu analysieren. Bitte berücksichtigen Sie, dass dieses Plug-In erfordert, dass Piwik bereits installiert ist. Bitte konsultieren Sie die  <a href="http://piwik.org/" title="piwik site">Piwik-Seite</a> für mehr Informationen.</p>]]></message>
-	<message key="plugins.generic.piwik.manager.settings.piwikUrl">Piwik-Url</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikUrlInstructions">Der volle URL zu Ihrer Piwik-Installation (z.B. http://myserver.net/piwik).</message>
+	<!-- Matomo -->
+	<message key="plugins.generic.piwik.displayName">Matomo-Plug-In</message>
+	<message key="plugins.generic.piwik.description"><![CDATA[Kombiniert OJS mit Matomo, einer freien und quelloffenen Anwendung zur Analyse des Website-Traffics. Erfordert, dass Matomo bereits installiert ist. Bitte konsultieren Sie die  <a href="http://matomo.org/" title="matomo site">Matomo-Seite</a> für mehr Informationen.]]></message>
+	<!-- Matomo Settings Management -->
+	<message key="plugins.generic.piwik.manager.settings.description"><![CDATA[<p>Wenn dieses Plug-In aktiviert ist, kann Matomo benutzt werden, um Nutzung und Traffic für diese Zeitschrift zu sammeln und zu analysieren. Bitte berücksichtigen Sie, dass dieses Plug-In erfordert, dass Matomo bereits installiert ist. Bitte konsultieren Sie die  <a href="http://piwik.org/" title="piwik site">Matomo-Seite</a> für mehr Informationen.</p>]]></message>
+	<message key="plugins.generic.piwik.manager.settings.piwikUrl">Matomo-Url</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikUrlInstructions">Der volle URL zu Ihrer Matomo-Installation (z.B. http://myserver.net/piwik).</message>
 	<message key="plugins.generic.piwik.manager.settings.piwikUrlRequired">Bitte geben Sie einen gültigen URL an. Fügen Sie http:// am Anfang ein.</message>
 	<message key="plugins.generic.piwik.manager.settings.piwikSiteId">Site profile ID</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdInstructions">Klicken Sie innerhalb von Piwik auf Einstellungen -> Webseiten. Die site profile ID wird neben Ihrem Website-Profilnamen angezeigt.</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdInstructions">Klicken Sie innerhalb von Matomo auf Einstellungen -> Webseiten. Die site profile ID wird neben Ihrem Website-Profilnamen angezeigt.</message>
 	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdRequired">Bitte geben Sie eine site profile ID ein.</message>
-
+	<!-- Matomo GDPR Extension -->
+	<message key="plugins.generic.piwik.manager.settings.piwikDsgvoSettings">Datenschutz-Grundverordnung(DSGVO)</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikDsgvoSettings.desc">Mit den folgenden Einstellungen können Sie den Matomo Tracker DSGVO konform betreiben. Hierzu gehört, dass der Nutzer per Consent-Banner gefragt wird ob er der Nutzung seiner persönlichen Daten zustimmt. Es kann zwischen Opt-In und Opt-Out Tracking gewählt werden, wobei die DSGVO Opt-In vorschreibt(privacy by default)! Das bedeutet, das der Nutzer erst sein Einverständnis geben muss bevor Daten an den Matomo-Server übertragen werden und eventuell ein Cookie gesetzt wird. Auf das Setzen eines Tracking-Cookies kann auch per Option komplett verzichtet werden.</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikDSGVO">DSGVO konforme Einstellungen</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikDSGVO.desc"><![CDATA[Folgende Einstellung sind möglich: <ul> <li> <strong>DSGVO konformes Tracking aktivieren:</strong> Aktiviert das DSGVO konforme Tracking und den Consent Banner. Ist diese Option abgewählt werden alle folgenden Einstellungen ignoriert </li> <li> <strong>Tracking erfordert Einwilligung:</strong>Diese Option muss für „privacy by default“ Tracking aktiviert werden! Das bedeutet, dass Besucher der Webseite erst erfasst werden, wenn sie der Erfassung explizit zugesagt haben. Ist diese Option deaktiviert werden Besucher Ihrer Webseite so lange erfasst bis diese explizit ablehnen (Opt-Out) <br/><strong>Matomo schreibt dazu folgendes: In the context of the <a href="https://matomo.org/docs/gdpr/" target="_blank">GDPR privacy regulations</a>, when you are processing personal data, in some cases you will need to ask for your users' consent. To identify whether you need to ask for consent, you need to determine whether your lawful basis for processing personal data is "Consent" or "Legitimate interest", or whether you can avoid collecting personal data altogether. We recommend to learn more about the <a href="https://matomo.org/blog/2018/04/lawful-basis-for-processing-personal-data-under-gdpr-with-matomo/" target="_blank">lawful basis under the GDPR for Matomo.</a></strong> </li> <li> <strong>Matomo Cookies deaktivieren: </strong>Es besteht die Möglichkeit Matomo ohne Cookies zu betreiben. Hierfür diese Option anwählen. Dies hat aber Nachteile, welche <a href="https://matomo.org/faq/general/faq_156/" target="_blank">hier nachgelesen werden können.</a> </li> </ul>]]> </message>
+	<message key="plugins.generic.piwik.manager.settings.piwikRequireDSGVO">DSGVO konformes Tracking aktivieren</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikRequireConsent"><![CDATA[Tracking erfordert Einwilligung <strong>(empfohlen)</strong>]]></message>
+	<message key="plugins.generic.piwik.manager.settings.piwikDisableCookies"><![CDATA[Matomo Cookies deaktivieren <strong>(empfohlen)</strong>]]></message>
+	<message key="plugins.generic.piwik.manager.settings.piwikCookieTTL">Lebenszeit des funktionalen Cookies</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikCookieTTL.desc">Dieses Plugin setzt ein funktionales Cookie in dem die vom Besucher getroffene Entscheidung (true/false) gespeichert ist. So lange die das Cookie nicht abgelaufen ist wird der Banner nicht mehr angezeigt. Die Dauer kann hier in Tagen angegeben werden z.B. 365, wenn die Einstellungen für ein Jahr gespeichert werden sollen.</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikPosition">Banner Position</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikPosition.desc">Das Banner kann oben oder unten im OJS erscheinen.</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikPosition.top">Oben</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikPosition.bottom">Unten</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikBannerContent">Inhalt des Banners</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikBannerContent.desc">Der Inhalt das Banner muss hier eingetragen werden. Links und anderer HTML-Elemente sind erlaubt. Die Farbe des Links lässt sich in den weiteren Optionen noch verändern, da dies hier über den WYSIWYG Editor nicht möglich ist. Eine  Bearbeitung der HTML-Elemente in der Quelltext Ansicht geht natürlich auch.</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikLinkColor">Farbe der Links im Banner</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikLinkColor.desc">Haben sie beispielsweise einen Link zu Ihren ABGs im Banner, so können Sie hier die Farbe des Links anpassen.</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikAcceptBtn">Akzeptieren Botton Text und Farben</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikAcceptBtn.desc">Hier können Sie die Texte und Farben des Akzeptieren Bottons (rechts) anpassen.</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikBtnTxt">Inhalt des Bottons</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikBtnColor">Schriftfarbe</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikBtnBGColor">Hintergrundfarbe</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikDeclineBtn">Ablehnen Botton Text und Farben</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikDeclineBtn.desc">Hier können Sie die Texte und Farben des Ablehnen Bottons (links) anpassen.</message>
 </locale>
