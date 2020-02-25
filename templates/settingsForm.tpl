@@ -31,14 +31,44 @@
         {fbvFormArea id="piwikDsgvoSettings" title="plugins.generic.piwik.manager.settings.piwikDsgvoSettings"}
             <div id="dsgvo_description">{translate key="plugins.generic.piwik.manager.settings.piwikDsgvoSettings.desc"}</div>
             <br/>
-            {fbvFormSection for="piwikRequireDSGVO" list=true label="plugins.generic.piwik.manager.settings.piwikRequireDSGVO" description="plugins.generic.piwik.manager.settings.piwikRequireDSGVO.desc"}
-                {fbvElement type="checkbox" id="piwikRequireDSGVO" name="piwikRequireDSGVO" value="1" checked=$piwikRequireDSGVO label="plugins.generic.piwik.manager.settings.piwikRequireDSGVO.check"}
-            {/fbvFormSection}
-            {fbvFormSection for="piwikRequireConsent" list=true title="plugins.generic.piwik.manager.settings.piwikRequireConsent" description="plugins.generic.piwik.manager.settings.piwikRequireConsent.desc"}
+            {fbvFormSection for="piwikRequireDSGVO" list=true label="plugins.generic.piwik.manager.settings.piwikDSGVO" description="plugins.generic.piwik.manager.settings.piwikDSGVO.desc"}
+                {fbvElement type="checkbox" id="piwikRequireDSGVO" name="piwikRequireDSGVO" value="1" checked=$piwikRequireDSGVO label="plugins.generic.piwik.manager.settings.piwikRequireDSGVO"}
                 {fbvElement type="checkbox" id="piwikRequireConsent" name="piwikRequireConsent" value="1" checked=$piwikRequireConsent label="plugins.generic.piwik.manager.settings.piwikRequireConsent"}
+                {fbvElement type="checkbox" id="piwikDisableCookies" name="piwikDisableCookies" value="1" checked=$piwikDisableCookies label="plugins.generic.piwik.manager.settings.piwikDisableCookies"}
+            {/fbvFormSection}
+            {fbvFormSection for="piwikCookieTTL" label="plugins.generic.piwik.manager.settings.piwikCookieTTL" description="plugins.generic.piwik.manager.settings.piwikCookieTTL.desc"}
+                {fbvElement type="text" id="piwikCookieTTL" name="piwikCookieTTL" value=$piwikCookieTTL}
+            {/fbvFormSection}
+            {fbvFormSection for="piwikPosition" list=true label="plugins.generic.piwik.manager.settings.piwikPosition" description="plugins.generic.piwik.manager.settings.piwikPosition.desc"}
+                {fbvElement id="piwikPosition" name="piwikPosition" type="select" from=$piwikPositionOptions selected=$piwikPosition}
             {/fbvFormSection}
             {fbvFormSection for="piwikBannerContent" label="plugins.generic.piwik.manager.settings.piwikBannerContent" description="plugins.generic.piwik.manager.settings.piwikBannerContent.desc"}
                 {fbvElement type="textarea" name="piwikBannerContent" id="piwikBannerContent" value=$piwikBannerContent rich=true height=$fbvStyles.height.TALL}
+            {/fbvFormSection}
+            {fbvFormSection for="piwikLinkColor" label="plugins.generic.piwik.manager.settings.piwikLinkColor" description="plugins.generic.piwik.manager.settings.piwikLinkColor.desc"}
+                {fbvElement type="colour" id="piwikLinkColor" name="piwikLinkColor" value=$piwikLinkColor}
+            {/fbvFormSection}
+            {fbvFormSection for="piwikAcceptBtnTxt" label="plugins.generic.piwik.manager.settings.piwikAcceptBtn" description="plugins.generic.piwik.manager.settings.piwikAcceptBtn.desc"}
+                <div style="display: inline-block; width: 33%; margin-right: 4%;">
+                    {fbvElement type="text" id="piwikAcceptBtnTxt" name="piwikAcceptBtnTxt" value=$piwikAcceptBtnTxt label="plugins.generic.piwik.manager.settings.piwikBtnTxt"}
+                </div>
+                <div style="display: inline-block; width: 30%">
+                    {fbvElement type="colour" id="piwikAcceptBtnColor" name="piwikAcceptBtnColor" value=$piwikAcceptBtnColor label="plugins.generic.piwik.manager.settings.piwikBtnColor"}
+                </div>
+                <div style="display: inline-block; width: 30%">
+                    {fbvElement type="colour" id="piwikAcceptBtnBGColor" name="piwikAcceptBtnBGColor" value=$piwikAcceptBtnBGColor label="plugins.generic.piwik.manager.settings.piwikBtnBGColor"}
+                </div>
+            {/fbvFormSection}
+            {fbvFormSection for="piwikDeclineBtnTxt" label="plugins.generic.piwik.manager.settings.piwikDeclineBtn" description="plugins.generic.piwik.manager.settings.piwikDeclineBtn.desc"}
+                <div style="display: inline-block; width: 33%; margin-right: 4%;">
+                    {fbvElement type="text" id="piwikDeclineBtnTxt" name="piwikDeclineBtnTxt" value=$piwikDeclineBtnTxt label="plugins.generic.piwik.manager.settings.piwikBtnTxt"}
+                </div>
+                <div style="display: inline-block; width: 30%">
+                    {fbvElement type="colour" id="piwikDeclineBtnColor" name="piwikDeclineBtnColor" value=$piwikDeclineBtnColor label="plugins.generic.piwik.manager.settings.piwikBtnColor"}
+                </div>
+                <div style="display: inline-block; width: 30%">
+                    {fbvElement type="colour" id="piwikDeclineBtnBGColor" name="piwikDeclineBtnBGColor" value=$piwikDeclineBtnBGColor label="plugins.generic.piwik.manager.settings.piwikBtnBGColor"}
+                </div>
             {/fbvFormSection}
         {/fbvFormArea}
         {fbvFormButtons}
