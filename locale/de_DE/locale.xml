@@ -41,7 +41,7 @@
 	<message key="plugins.generic.piwik.manager.settings.piwikBannerContent.desc">Der Inhalt das Banner muss hier eingetragen werden. Links und anderer HTML-Elemente sind erlaubt. Die Farbe des Links lässt sich in den weiteren Optionen noch verändern, da dies hier über den WYSIWYG Editor nicht möglich ist. Eine  Bearbeitung der HTML-Elemente in der Quelltext Ansicht geht natürlich auch.</message>
 	<message key="plugins.generic.piwik.manager.settings.piwikLinkColor">Farbe der Links im Banner</message>
 	<message key="plugins.generic.piwik.manager.settings.piwikLinkColor.desc">Haben sie beispielsweise einen Link zu Ihren ABGs im Banner, so können Sie hier die Farbe des Links anpassen.</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikAcceptBtn">Akzeptieren uotton Text und Farben</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikAcceptBtn">Akzeptieren Button Text und Farben</message>
 	<message key="plugins.generic.piwik.manager.settings.piwikAcceptBtn.desc">Hier können Sie die Texte und Farben des Akzeptieren Buttons (rechts) anpassen.</message>
 	<message key="plugins.generic.piwik.manager.settings.piwikBtnTxt">Inhalt des Buttons</message>
 	<message key="plugins.generic.piwik.manager.settings.piwikBtnColor">Schriftfarbe</message>
