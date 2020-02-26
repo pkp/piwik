@@ -24,28 +24,28 @@
 	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdInstructions">Within Matomo, click on Settings -> Websites. The site profile ID is displayed next to your site profile name.</message>
 	<message key="plugins.generic.piwik.manager.settings.piwikSiteIdRequired">Please enter a site profile ID.</message>
 	<!-- Matomo GDPR Extension -->
-	<message key="plugins.generic.piwik.manager.settings.piwikDsgvoSettings">Matomo GDPR Settings</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikDsgvoSettings.desc">The following settings allow a GDPR-compliant use of Matomo Tracking.</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikDSGVO">GDPR conform Tracking</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikDSGVO.desc">This option enables GDPR compliant tracking.</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikDsgvoSettings">General Data Protection Regulation (GDPR)</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikDsgvoSettings.desc"><![CDATA[With the following settings you can operate the Matomo Tracker GDPR compliant. This includes that the user is asked via "consent banner" whether he agrees to the collection and use of personal data and the use of tracking cookies. It is possible to operate Matomo in Opt-In (Consent required) or Opt-Out mode. Opt-In means that the visitors of the website must give their consent before data is transferred to the Matomo server and a cookie is placed. The setting of a tracking cookie can also be waived completely by an option. <strong> You should only adjust the following settings in consultation with your data protection representative and check whether the data is transferred correctly to your Matomo server.</strong>]]></message>
+	<message key="plugins.generic.piwik.manager.settings.piwikDSGVO">GDPR Settings</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikDSGVO.desc"><![CDATA[The following settings are possible: <ul> <li> <strong>Enable GDPR compliant tracking:</strong>Activates GDPR compliant tracking and the "consent banner". If this option is deactivated, all following settings are ignored and your Matomo tracks not GDPR compliant! </li> <li> <strong>Enable Require Consent:</strong>This option should be activated for the "privacy by default" policy of the DSGVO. This means that website visitors are not tracked until the tracking has been explicitly agreed to (opt-in). If this option is deactivated, website visitors are tracked until the tracking is explicitly declined (Opt-Out). <strong>Matomo writes the following about this: In the context of the <a href="https://matomo.org/docs/gdpr/" target="_blank">GDPR privacy regulations</a>, when you are processing personal data, in some cases you will need to ask for your users' consent. To identify whether you need to ask for consent, you need to determine whether your lawful basis for processing personal data is "Consent" or "Legitimate interest", or whether you can avoid collecting personal data altogether. We recommend to learn more about the <a href="https://matomo.org/blog/2018/04/lawful-basis-for-processing-personal-data-under-gdpr-with-matomo/" target="_blank">lawful basis under the GDPR for Matomo.</a></strong> </li> <li> <strong> Enable Cookie free tracking: </strong>It is possible to operate Matomo without cookies. Select this option for this purpose. But this has disadvantages which can be read <a href="https://matomo.org/faq/general/faq_156/" target="_blank">here.</a></li></ul>]]></message>
 	<message key="plugins.generic.piwik.manager.settings.piwikRequireDSGVO">Enable GDPR conform Tracking</message>
 	<message key="plugins.generic.piwik.manager.settings.piwikRequireConsent"><![CDATA[Enable Require Consent <strong>(recommended)</strong>]]></message>
 	<message key="plugins.generic.piwik.manager.settings.piwikDisableCookies"><![CDATA[Enable Cookie free tracking <strong>(recommended)</strong>]]></message>
-	<message key="plugins.generic.piwik.manager.settings.piwikCookieTTL">Cookie Lifetime</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikCookieTTL.desc">Lorem ipsum</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikCookieTTL">Functional cookie durability</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikCookieTTL.desc">This plugin places a functional cookie in which the decisions made by the visitor regarding the collection of his data are stored. As long as the cookie has not expired, the banner will not be displayed and the user will not be asked for his consent again. The duration can be specified here in days, e.g. 365 if the settings are to be saved for a year.</message>
 	<message key="plugins.generic.piwik.manager.settings.piwikPosition">Banner Position</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikPosition.desc">Lorem ipsum</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikPosition.desc">The banner can be placed at the top or bottom of OJS.</message>
 	<message key="plugins.generic.piwik.manager.settings.piwikPosition.top">Top</message>
 	<message key="plugins.generic.piwik.manager.settings.piwikPosition.bottom">Bottom</message>
 	<message key="plugins.generic.piwik.manager.settings.piwikBannerContent">Banner Content</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikBannerContent.desc">Lorem ipsum</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikBannerContent.desc">The content of the banner must be entered here. Links and other HTML elements are allowed. The color of the link can be changed in the further options, as this is not possible here using the WYSIWYG editor. Editing the HTML elements in the source code view is also possible.</message>
 	<message key="plugins.generic.piwik.manager.settings.piwikLinkColor">Link Color</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikLinkColor.desc">Lorem ipsum</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikAcceptBtn">Accept Button Text and Style</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikAcceptBtn.desc">Lorem ipsum</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikBtnTxt">Button Text</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikBtnColor">Font Color</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikBtnBGColor">Background Color</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikDeclineBtn">Decline Button Text and Style</message>
-	<message key="plugins.generic.piwik.manager.settings.piwikDeclineBtn.desc">Lorem ipsum</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikLinkColor.desc">For example, if you have a link to your Terms in your banner, you can adjust the color of the link here.</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikAcceptBtn">Accept button text and colors</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikAcceptBtn.desc">Here you can adjust the texts and colors of the accept button (right).</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikBtnTxt">Button text</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikBtnColor">Font color</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikBtnBGColor">Background color</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikDeclineBtn">Decline button text and colors</message>
+	<message key="plugins.generic.piwik.manager.settings.piwikDeclineBtn.desc">Here you can adjust the texts and colors of the decline button (left).</message>
 </locale>
