@@ -1,0 +1,51 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-02-26 19:31+0000\n"
+"Last-Translator: Primož Svetek <primoz.svetek@gmail.com>\n"
+"Language-Team: Slovenian <http://translate.pkp.sfu.ca/projects/plugins/piwik/"
+"sl/>\n"
+"Language: sl\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=4; plural=n%100==1 ? 0 : n%100==2 ? 1 : n%100==3 || "
+"n%100==4 ? 2 : 3;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdRequired"
+msgstr "Prosimo vnesite ID profila spletišča."
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdInstructions"
+msgstr ""
+"V aplikaciji Piwik kliknite na Settings->Websites. ID profila spletišča je "
+"prikazan poleg imena vašega spletišča."
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteId"
+msgstr "ID profila spletišča"
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlRequired"
+msgstr "Prosimo vnesite veljaven URL naslov. Uporabite tudi http:// na začetku."
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlInstructions"
+msgstr ""
+"Celoten naslov do vaše Piwik namestitve (npr. http://myserver.net/piwik)."
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrl"
+msgstr "Piwik URL"
+
+msgid "plugins.generic.piwik.manager.settings.description"
+msgstr ""
+"<p>Vtičnik omogoča, da lahko uporabljate Piwik za zbiranje in analizo "
+"uporabe in spletnega prometa za to revijo. Za delovanje podrebujete "
+"predhodno nameščen Piwik. Za več informacij poglejte  <a href=\"http://piwik."
+"org/\" title=\"piwik site\">Piwik spletno stran</a>.</p>"
+
+msgid "plugins.generic.piwik.description"
+msgstr ""
+"Povežite OJS s Piwik, zastonj in odprtokodno aplikacijo za analizo spletnega "
+"prometa. Za delovanje podrebujete predhodno nameščen Piwik. Za več "
+"informacij poglejte  <a href=\"http://piwik.org/\" title=\"piwik site\">"
+"Piwik spletno stran</a>."
+
+msgid "plugins.generic.piwik.displayName"
+msgstr "Piwik vtičnik"
