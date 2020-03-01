@@ -1,2 +1,50 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-03-02 13:36+0000\n"
+"Last-Translator: Ramli Baharuddin <ramli.baharuddin@relawanjurnal.id>\n"
+"Language-Team: Indonesian <http://translate.pkp.sfu.ca/projects/plugins/"
+"piwik/id/>\n"
+"Language: id\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.piwik.manager.settings.description"
+msgstr ""
+"<p>Bila plugin aktif, Pwiki dapat dipakai untuk mengumpulkan dan "
+"menganalisis pemakaian website dan trafik jurnal ini. Perlu diketahui bahwa "
+"plugin ini mensyaratkan Pwiki sudah terinstal. Silakan buka <a href=\""
+"http://piwik.org/\" title=\"Piwik site\">website Piwik</a> untuk informasi "
+"lebih lanjut.</p>"
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdRequired"
+msgstr "Masukkan ID profil website."
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdInstructions"
+msgstr ""
+"Pada Piwik, klik pada Pengaturan -> Website. ID profil website tampil di "
+"samping nama profil website."
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteId"
+msgstr "ID profil website"
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlRequired"
+msgstr "Masukkab url yang valid. Sertakan http:// di awal."
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlInstructions"
+msgstr "Url lengkap instalasi Pwiki Anda (contoh,  http://myserver.net/piwik)."
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrl"
+msgstr "Url Pwiki"
+
+msgid "plugins.generic.piwik.description"
+msgstr ""
+"Integrasika OJS dengan Piwik, sebuah aplikasi analisis trafik website yang "
+"gratis dan open source. Pwiki wajib sudah terinstal. Silakan buka<a href=\""
+"http://piwik.org/\" title=\"piwik site\">Piwik site</a> untuk info lebih "
+"lengkap."
+
+msgid "plugins.generic.piwik.displayName"
+msgstr "Plugil Pwiki"
