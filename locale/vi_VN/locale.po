@@ -1,2 +1,50 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2020-07-11 17:40+0000\n"
+"Last-Translator: Tran Ngoc Trung <khuchatthienduong@gmail.com>\n"
+"Language-Team: Vietnamese <http://translate.pkp.sfu.ca/projects/plugins/"
+"piwik/vi_VN/>\n"
+"Language: vi_VN\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdRequired"
+msgstr "Vui lòng nhập ID hồ sơ trang web."
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdInstructions"
+msgstr ""
+"Trong Piwik, nhấp vào Settings -> Websites. ID hồ sơ trang web được hiển thị "
+"bên cạnh tên hồ sơ trang web của bạn."
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteId"
+msgstr "ID hồ sơ trang web"
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlRequired"
+msgstr "Vui lòng nhập một url hợp lệ. Bao gồm http:// khi bắt đầu."
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlInstructions"
+msgstr "Url đầy đủ để cài đặt Piwik của bạn (tức là http://myserver.net/piwik)."
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrl"
+msgstr "URL Piwik"
+
+msgid "plugins.generic.piwik.manager.settings.description"
+msgstr ""
+"<p>Với plugin này được bật, Piwik có thể được sử dụng để thu thập và phân "
+"tích việc sử dụng và lưu lượng truy cập trang web cho tạp chí này. Xin lưu ý "
+"rằng plugin này yêu cầu Piwik đã được cài đặt. Vui lòng xem trang web <a "
+"href=\"http://piwik.org/\" title=\"Piwik site\">Piwik site</a> để biết thêm "
+"thông tin.</p>"
+
+msgid "plugins.generic.piwik.description"
+msgstr ""
+"Tích hợp OJS với Piwik, một ứng dụng phân tích lưu lượng truy cập trang web "
+"miễn phí và nguồn mở. Yêu cầu Piwik đã được cài đặt. Vui lòng xem trang web <"
+"a href=\"http://piwik.org/\" title=\"piwik site\">Piwik site</a> để biết "
+"thêm thông tin."
+
+msgid "plugins.generic.piwik.displayName"
+msgstr "Plugin Piwik"
