@@ -1,0 +1,49 @@
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2020-10-19 15:42+0000\n"
+"Last-Translator: Antti-Jussi Nygård <ajnyga@gmail.com>\n"
+"Language-Team: Finnish <http://translate.pkp.sfu.ca/projects/plugins/piwik/"
+"fi_FI/>\n"
+"Language: fi_FI\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdRequired"
+msgstr "Anna sivuston profiilin ID."
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteId"
+msgstr "Sivuston profiilin ID"
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlRequired"
+msgstr "Anna kelvollinen URL, sisällytä http:// alkuun."
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrl"
+msgstr "Piwik Url"
+
+msgid "plugins.generic.piwik.displayName"
+msgstr "Piwik-lisäosa"
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdInstructions"
+msgstr ""
+"Piwikissä klikkaa Asetukset -> Sivustot. Sivustotunnus (ID) näytetään "
+"sivustosi profiilinimen vieressä."
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlInstructions"
+msgstr "Anna Piwik-asennuksen koko URL, kuten http://myserver.net/piwik."
+
+msgid "plugins.generic.piwik.manager.settings.description"
+msgstr ""
+"<p>Käyttöönotettuna Piwik-lisäosalla voidaan kerätä ja analysoida julkaisun "
+"sivuston käyttöä ja nettiliikennettä. Huomaa, että Piwikin tulee olla jo "
+"asennettu. Katso <a href=\"http://piwik.org/\" title=\"Piwikin sivusto\">"
+"lisätietoja Piwikin sivustolta</a>.</p>"
+
+msgid "plugins.generic.piwik.description"
+msgstr ""
+"Yhdistä OJS ja Piwik, joka on avoimen lähdekoodin nettisivuston "
+"liikenneanalysaattori. Yhdistäminen edellyttää, että Piwik on asennettuna. "
+"Katso <a href=\"http://piwik.org/\" title=\"piwik site\">Piwikin sivustolta "
+"lisätietoja</a>."
