@@ -1,2 +1,52 @@
 msgid ""
-msgstr "X-Generator: Weblate\nMIME-Version: 1.0\nContent-Type: text/plain; charset=UTF-8\nContent-Transfer-Encoding: 8bit"
+msgstr ""
+"PO-Revision-Date: 2021-01-21 14:53+0000\n"
+"Last-Translator: Eirik Hanssen <eirikh@oslomet.no>\n"
+"Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/"
+"plugins/piwik/nb_NO/>\n"
+"Language: nb_NO\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdRequired"
+msgstr "Legg inn et nettsteds profil ID."
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdInstructions"
+msgstr ""
+"Inne i Matomo, trykk på Settings  > Websites. Nettstedets profil ID vises "
+"ved siden av nettstedet ditt sitt profilnavn."
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteId"
+msgstr "Nettstedets profil ID"
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlRequired"
+msgstr "Legg inn en gyldig URL. Inkluder https:// i starten."
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlInstructions"
+msgstr ""
+"Fullstendig URL til din Matomo innstallasjon (f.eks https://example.com/"
+"matomo)."
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrl"
+msgstr "Matomo URL"
+
+msgid "plugins.generic.piwik.manager.settings.description"
+msgstr ""
+"<p>Med dette programtillegget aktivert kan Matomo brukes til å samle inn og "
+"analysere nettstedets bruk og trafikk for dette tidsskriftet. Merk at dette "
+"programtillegget krever at Matomo allerede er innstallert. Se <a href=\""
+"http://matomo.org/\" title=\"Matomo site\">Matomo nettsiden</a> for mer "
+"informasjon.</p>"
+
+msgid "plugins.generic.piwik.description"
+msgstr ""
+"Integrer OJS med Matomo, et gratis og open kildekodebasert "
+"nettstedsapplikasjon. Krever en fungerende innstallasjon av Matomo. Se <a "
+"href=\"http://matomo.org/\" title=\"Matomo\">Matomo nettsiden</a> for mer "
+"informasjon."
+
+msgid "plugins.generic.piwik.displayName"
+msgstr "Matomo programtillegg"
