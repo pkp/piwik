@@ -1,8 +1,7 @@
 msgid ""
 msgstr ""
 "PO-Revision-Date: 2021-01-28 22:54+0000\n"
-"Last-Translator: FRITT, University of Oslo Library <fritt-"
-"info@journals.uio.no>\n"
+"Last-Translator: Tormod Strømme <tormod.stromme@uib.no>\n"
 "Language-Team: Norwegian Bokmål <http://translate.pkp.sfu.ca/projects/"
 "plugins/piwik/nb_NO/>\n"
 "Language: nb_NO\n"
@@ -32,7 +31,7 @@ msgstr ""
 "matomo)."
 
 msgid "plugins.generic.piwik.manager.settings.piwikUrl"
-msgstr "Matomo URL"
+msgstr "Matomo-URL"
 
 msgid "plugins.generic.piwik.manager.settings.description"
 msgstr ""
