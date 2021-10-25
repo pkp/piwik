@@ -1,8 +1,51 @@
 # Studiorimau <studiorimau@gmail.com>, 2021.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2021-10-26 00:23+0000\n"
+"Last-Translator: Studiorimau <studiorimau@gmail.com>\n"
+"Language-Team: Malay <http://translate.pkp.sfu.ca/projects/plugins/piwik/ms/>"
+"\n"
 "Language: ms\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=1; plural=0;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdRequired"
+msgstr "Sila masukkan ID profil laman."
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdInstructions"
+msgstr ""
+"Di Matomo, klik pada Tetapan -> Laman Web. ID profil laman dipaparkan di "
+"sebelah nama profil laman anda."
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteId"
+msgstr "ID profil laman"
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlRequired"
+msgstr "Sila masukkan url yang sah. Sertakan http:// pada permulaan."
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlInstructions"
+msgstr "Url penuh ke pemasangan Matomo anda (iaitu http://myserver.net/matomo)."
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrl"
+msgstr "Url Matomo"
+
+msgid "plugins.generic.piwik.manager.settings.description"
+msgstr ""
+"<p>Dengan plugin ini didayakan Matomo boleh digunakan untuk mengumpul dan "
+"menganalisis penggunaan laman web dan trafik untuk jurnal ini. Sila ambil "
+"perhatian bahawa pluign ini memerlukan Matomo telah dipasang. Sila lihat <a "
+"href=\"http://matomo.org/\" title=\"Laman web Matomo\">Laman Matomo</a> "
+"untuk mendapatkan maklumat lanjut.</p>"
+
+msgid "plugins.generic.piwik.description"
+msgstr ""
+"Integrasikan OJS dengan Matomo, aplikasi analisis trafik laman web sumber "
+"terbuka dan percuma. Memerlukan Matomo telah dipasang. Sila lihat <a href=\""
+"http://matomo.org/\" title=\"Matomo\"> laman web Matomo </a> untuk maklumat "
+"lebih lanjut."
+
+msgid "plugins.generic.piwik.displayName"
+msgstr "Plugin Matomo"
