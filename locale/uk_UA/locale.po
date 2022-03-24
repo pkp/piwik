@@ -4,7 +4,7 @@ msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-25T15:06:39+00:00\n"
-"PO-Revision-Date: 2022-02-22 11:06+0000\n"
+"PO-Revision-Date: 2022-03-25 14:56+0000\n"
 "Last-Translator: Petro Bilous <petrobilous@ukr.net>\n"
 "Language-Team: Ukrainian <http://translate.pkp.sfu.ca/projects/plugins/piwik/"
 "uk_UA/>\n"
@@ -16,7 +16,6 @@ msgstr ""
 "4 && (n%100<10 || n%100>=20) ? 1 : 2;\n"
 "X-Generator: Weblate 3.9.1\n"
 
-#, fuzzy
 msgid "plugins.generic.piwik.displayName"
 msgstr "Плагін Matomo"
 
@@ -44,14 +43,14 @@ msgstr ""
 "matomo)."
 
 msgid "plugins.generic.piwik.manager.settings.piwikUrlRequired"
-msgstr "Будь ласка, вкажіть коректну адресу url. Разом з префіксом http:// на початку."
+msgstr "Будь ласка, вкажіть коректну URL-адресу. Почніть її з http://."
 
 msgid "plugins.generic.piwik.manager.settings.piwikSiteId"
 msgstr "ID профілю сайту"
 
 msgid "plugins.generic.piwik.manager.settings.piwikSiteIdInstructions"
 msgstr ""
-"Зайдіть у Matomo, натисніть Settings -> Websites. ID профілю сайту "
+"Зайдіть у Matomo, натисніть Settings > Websites. ID профілю сайту "
 "відображається безпосередньо після назви профілю сайту."
 
 msgid "plugins.generic.piwik.manager.settings.piwikSiteIdRequired"
