@@ -1,8 +1,53 @@
 # Artashes Mirzoyan <amirzoyan@sci.am>, 2022.
+# Tigran Zargaryan <tigran@flib.sci.am>, 2022.
 msgid ""
 msgstr ""
+"PO-Revision-Date: 2022-07-04 05:31+0000\n"
+"Last-Translator: Tigran Zargaryan <tigran@flib.sci.am>\n"
+"Language-Team: Armenian <http://translate.pkp.sfu.ca/projects/plugins/piwik/"
+"hy_AM/>\n"
 "Language: hy_AM\n"
 "MIME-Version: 1.0\n"
 "Content-Type: text/plain; charset=UTF-8\n"
 "Content-Transfer-Encoding: 8bit\n"
-"X-Generator: Weblate\n"
+"Plural-Forms: nplurals=2; plural=n > 1;\n"
+"X-Generator: Weblate 3.9.1\n"
+
+msgid "plugins.generic.piwik.manager.settings.description"
+msgstr ""
+"<p>Այս փլագինով միացված Matomo-ն կարող է օգտագործվել այս ամսագրի վեբ կայքի "
+"օգտագործման և տրաֆիկի հավաքման և վերլուծության համար: Խնդրում ենք նկատի "
+"ունենալ, որ այս հավելվածը պահանջում է, որ Matomo-ն արդեն տեղադրված լինի: "
+"Լրացուցիչ տեղեկությունների համար այցելեք <a href=\"https://matomo.org/\" "
+"title=\"Matomo site\">Matomo site</a>:</p>"
+
+msgid "plugins.generic.piwik.description"
+msgstr ""
+"Ինտեգրել OJS-ը Matomo-ի՝ վեբ կայքի տրաֆիկի վերլուծության անվճար և բաց կոդով "
+"հավելվածի հետ: Պահանջում է, որ Matomo-ն արդեն տեղադրված լինի: Լրացուցիչ "
+"տեղեկությունների համար այցելեք <a href=\"https://matomo.org/\" title=\""
+"Matomo\">Matomo site</a>:"
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdRequired"
+msgstr "Խնդրում ենք մուտքագրել կայքի պրոֆիլի ID-ն:"
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdInstructions"
+msgstr ""
+"Matomo-ում սեղմեք Կարգավորումներ -> Կայքեր: Կայքի պրոֆիլի ID-ն ցուցադրվում է "
+"ձեր կայքի պրոֆիլի անվան կողքին:"
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteId"
+msgstr "Կայքի պրոֆիլի ID"
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlRequired"
+msgstr "Խնդրում ենք մուտքագրել վավեր url: Ներառեք http:// սկզբում:"
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlInstructions"
+msgstr ""
+"Ձեր Matomo տեղադրման ամբողջական url-ը (այսինքն՝ http://myserver.net/matomo):"
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrl"
+msgstr "Matomo Url"
+
+msgid "plugins.generic.piwik.displayName"
+msgstr "Matomo փլագին"
