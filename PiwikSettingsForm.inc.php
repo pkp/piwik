@@ -62,18 +62,19 @@ class PiwikSettingsForm extends Form {
 	 * Fetch the form.
 	 * @copydoc Form::fetch()
 	 */
-	function fetch($request) {
+	function fetch($request, $template = null, $display = false) {
 		$templateMgr = TemplateManager::getManager($request);
 		$templateMgr->assign('pluginName', $this->_plugin->getName());
-		return parent::fetch($request);
+		return parent::fetch($request, $template, $display);
 	}
 
 	/**
 	 * Save settings.
 	 */
-	function execute() {
+	function execute(...$functionArgs) {
 		$this->_plugin->updateSetting($this->_contextId, 'piwikSiteId', $this->getData('piwikSiteId'), 'int');
 		$this->_plugin->updateSetting($this->_contextId, 'piwikUrl', trim($this->getData('piwikUrl'), "\"\';"), 'string');
+		return parent::execute(...$functionArgs);
 	}
 }
 
