@@ -1,0 +1,53 @@
+# Cyril Kamburov <cc@intermedia.bg>, 2022.
+msgid ""
+msgstr ""
+"PO-Revision-Date: 2022-08-18 16:33+0000\n"
+"Last-Translator: Cyril Kamburov <cc@intermedia.bg>\n"
+"Language-Team: Bulgarian <http://translate.pkp.sfu.ca/projects/plugins/piwik/"
+"bg_BG/>\n"
+"Language: bg_BG\n"
+"MIME-Version: 1.0\n"
+"Content-Type: text/plain; charset=UTF-8\n"
+"Content-Transfer-Encoding: 8bit\n"
+"Plural-Forms: nplurals=2; plural=n != 1;\n"
+"X-Generator: Weblate 4.13.1\n"
+
+msgid "plugins.generic.piwik.displayName"
+msgstr "Добавка (плъгин) Matomo"
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdRequired"
+msgstr "Моля, въведете идентификатор на профила на сайта."
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteIdInstructions"
+msgstr ""
+"В Matomo щракнете върху Настройки -> Уебсайтове. Идентификационният номер на "
+"профила на сайта се показва до името на профила на вашия сайт."
+
+msgid "plugins.generic.piwik.manager.settings.piwikSiteId"
+msgstr "Идентификатор на профила на сайта"
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlRequired"
+msgstr "Моля, въведете валиден URL адрес. Включете http:// в началото."
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrlInstructions"
+msgstr ""
+"Пълният URL адрес на вашата инсталация на Matomo (т.е. http://myserver.net/"
+"matomo)."
+
+msgid "plugins.generic.piwik.manager.settings.piwikUrl"
+msgstr "URL на Matomo"
+
+msgid "plugins.generic.piwik.manager.settings.description"
+msgstr ""
+"<p>С активирана добавка (плъгин) Matomo може да се използва за събиране и "
+"анализиране на използването и трафика на уеб сайта за това списание. Моля, "
+"имайте предвид, че този плъгин изисква Matomo да е вече инсталиран. Моля, "
+"вижте <a href=\"https://matomo.org/\" title=\"Matomo site\">сайта Matomo</a> "
+"за повече информация.</p>"
+
+msgid "plugins.generic.piwik.description"
+msgstr ""
+"Интегрирайте OJS с Matomo, безплатно приложение за анализ на трафика на "
+"уебсайтове с отворен код. Изисква Matomo вече да е инсталиран. Моля, вижте "
+"<a href=\"https://matomo.org/\" title=\"Matomo\">сайта на Matomo</a> за "
+"повече информация."
