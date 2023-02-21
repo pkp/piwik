@@ -13,7 +13,11 @@
  * @brief Piwik plugin class
  */
 
-import('lib.pkp.classes.plugins.GenericPlugin');
+use PKP\plugins\GenericPlugin;
+use PKP\linkAction\LinkAction;
+use PKP\linkAction\request\AjaxModal;
+
+use APP\template\TemplateManager;
 
 class PiwikPlugin extends GenericPlugin {
 	/**
@@ -51,7 +55,6 @@ class PiwikPlugin extends GenericPlugin {
 	 */
 	function getActions($request, $verb) {
 		$router = $request->getRouter();
-		import('lib.pkp.classes.linkAction.request.AjaxModal');
 		return array_merge(
 				$this->getEnabled()?array(
 						new LinkAction(
@@ -134,7 +137,7 @@ EOF;
 				'piwik',
 				$piwikCode,
 				array(
-					'priority' => STYLE_SEQUENCE_LAST,
+					'priority' => TemplateManager::STYLE_SEQUENCE_LAST,
 					'inline'   => true,
 				)
 		);

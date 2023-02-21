@@ -13,7 +13,7 @@
  * @brief Form for managers to modify Piwik plugin settings
  */
 
-import('lib.pkp.classes.form.Form');
+use PKP\form\Form;
 
 class PiwikSettingsForm extends Form {
 
@@ -34,11 +34,11 @@ class PiwikSettingsForm extends Form {
 
 		parent::__construct($plugin->getTemplateResource('settingsForm.tpl'));
 
-		$this->addCheck(new FormValidator($this, 'piwikSiteId', 'required', 'plugins.generic.piwik.manager.settings.piwikSiteIdRequired'));
-		$this->addCheck(new FormValidatorUrl($this, 'piwikUrl', 'required', 'plugins.generic.piwik.manager.settings.piwikUrlRequired'));
+		$this->addCheck(new \PKP\form\validation\FormValidator($this, 'piwikSiteId', 'required', 'plugins.generic.piwik.manager.settings.piwikSiteIdRequired'));
+		$this->addCheck(new \PKP\form\validation\FormValidatorUrl($this, 'piwikUrl', 'required', 'plugins.generic.piwik.manager.settings.piwikUrlRequired'));
 
-		$this->addCheck(new FormValidatorPost($this));
-		$this->addCheck(new FormValidatorCSRF($this));
+		$this->addCheck(new \PKP\form\validation\FormValidatorPost($this));
+		$this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
 	}
 
 	/**
