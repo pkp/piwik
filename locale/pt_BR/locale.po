@@ -1,10 +1,10 @@
-# Diego José Macêdo <diegojmacedo@gmail.com>, 2022.
+# Diego José Macêdo <diegojmacedo@gmail.com>, 2022, 2023.
 msgid ""
 msgstr ""
 "Project-Id-Version: \n"
 "Report-Msgid-Bugs-To: \n"
 "POT-Creation-Date: 2020-02-25T15:06:39+00:00\n"
-"PO-Revision-Date: 2022-08-10 03:22+0000\n"
+"PO-Revision-Date: 2023-02-23 03:48+0000\n"
 "Last-Translator: Diego José Macêdo <diegojmacedo@gmail.com>\n"
 "Language-Team: Portuguese (Brazil) <http://translate.pkp.sfu.ca/projects/"
 "plugins/piwik/pt_BR/>\n"
@@ -47,7 +47,7 @@ msgstr "ID do perfil do portal"
 
 msgid "plugins.generic.piwik.manager.settings.piwikSiteIdInstructions"
 msgstr ""
-"Dentro do Matomo, clique em Configurações -> Websites.  O ID do perfil do "
+"Dentro do Matomo, clique em Configurações -> Websites. O ID do perfil do "
 "portal é exibido ao lado do seu nome."
 
 msgid "plugins.generic.piwik.manager.settings.piwikSiteIdRequired"
