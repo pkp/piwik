@@ -13,8 +13,8 @@
 <version>
 	<application>piwik</application>
 	<type>plugins.generic</type>
-	<release>1.0.5.0</release>
-	<date>2023-04-11</date>
+	<release>1.0.6.0</release>
+	<date>2025-03-19</date>
 	<lazy-load>1</lazy-load>
 	<class>PiwikPlugin</class>
 </version>
