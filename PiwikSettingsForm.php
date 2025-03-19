@@ -3,8 +3,8 @@
 /**
  * @file PiwikSettingsForm.php
  *
- * Copyright (c) 2013-2023 Simon Fraser University
- * Copyright (c) 2003-2023 John Willinsky
+ * Copyright (c) 2013-2025 Simon Fraser University
+ * Copyright (c) 2003-2025 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
  *
  * @class PiwikSettingsForm
@@ -13,46 +13,53 @@
 
 namespace APP\plugins\generic\piwik;
 
-use PKP\form\Form;
 use APP\template\TemplateManager;
+use PKP\form\Form;
+use PKP\form\validation\FormValidator;
+use PKP\form\validation\FormValidatorCSRF;
+use PKP\form\validation\FormValidatorPost;
+use PKP\form\validation\FormValidatorUrl;
 
-class PiwikSettingsForm extends Form {
-
-    protected int $_contextId;
-    protected PiwikPlugin $_plugin;
+class PiwikSettingsForm extends Form
+{
+    protected int $contextId;
+    protected PiwikPlugin $plugin;
 
     /**
      * Constructor
      * @param $plugin PiwikPlugin
      * @param $contextId int
      */
-    function __construct($plugin, $contextId) {
-        $this->_contextId = $contextId;
-        $this->_plugin = $plugin;
+    public function __construct($plugin, $contextId)
+    {
+        $this->contextId = $contextId;
+        $this->plugin = $plugin;
 
         parent::__construct($plugin->getTemplateResource('settingsForm.tpl'));
 
-        $this->addCheck(new \PKP\form\validation\FormValidator($this, 'piwikSiteId', 'required', 'plugins.generic.piwik.manager.settings.piwikSiteIdRequired'));
-        $this->addCheck(new \PKP\form\validation\FormValidatorUrl($this, 'piwikUrl', 'required', 'plugins.generic.piwik.manager.settings.piwikUrlRequired'));
+        $this->addCheck(new FormValidator($this, 'piwikSiteId', 'required', 'plugins.generic.piwik.manager.settings.piwikSiteIdRequired'));
+        $this->addCheck(new FormValidatorUrl($this, 'piwikUrl', 'required', 'plugins.generic.piwik.manager.settings.piwikUrlRequired'));
 
-        $this->addCheck(new \PKP\form\validation\FormValidatorPost($this));
-        $this->addCheck(new \PKP\form\validation\FormValidatorCSRF($this));
+        $this->addCheck(new FormValidatorPost($this));
+        $this->addCheck(new FormValidatorCSRF($this));
     }
 
     /**
      * Initialize form data.
      */
-    function initData() {
+    public function initData()
+    {
         $this->_data = array(
-            'piwikSiteId' => $this->_plugin->getSetting($this->_contextId, 'piwikSiteId'),
-            'piwikUrl' => $this->_plugin->getSetting($this->_contextId, 'piwikUrl'),
+            'piwikSiteId' => $this->plugin->getSetting($this->contextId, 'piwikSiteId'),
+            'piwikUrl' => $this->plugin->getSetting($this->contextId, 'piwikUrl'),
         );
     }
 
     /**
      * Assign form data to user-submitted data.
      */
-    function readInputData() {
+    public function readInputData()
+    {
         $this->readUserVars(array('piwikSiteId','piwikUrl'));
     }
 
@@ -60,19 +67,20 @@ class PiwikSettingsForm extends Form {
      * Fetch the form.
      * @copydoc Form::fetch()
      */
-    function fetch($request, $template = null, $display = false) {
+    public function fetch($request, $template = null, $display = false)
+    {
         $templateMgr = TemplateManager::getManager($request);
-        $templateMgr->assign('pluginName', $this->_plugin->getName());
+        $templateMgr->assign('pluginName', $this->plugin->getName());
         return parent::fetch($request, $template, $display);
     }
 
     /**
      * Save settings.
      */
-    function execute(...$functionArgs) {
-        $this->_plugin->updateSetting($this->_contextId, 'piwikSiteId', $this->getData('piwikSiteId'), 'int');
-        $this->_plugin->updateSetting($this->_contextId, 'piwikUrl', trim($this->getData('piwikUrl'), "\"\';"), 'string');
+    public function execute(...$functionArgs)
+    {
+        $this->plugin->updateSetting($this->contextId, 'piwikSiteId', $this->getData('piwikSiteId'), 'int');
+        $this->plugin->updateSetting($this->contextId, 'piwikUrl', trim($this->getData('piwikUrl'), "\"\';"), 'string');
         return parent::execute(...$functionArgs);
     }
 }
-

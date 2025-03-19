@@ -3,8 +3,8 @@
 /**
  * @file PiwikPlugin.php
  *
- * Copyright (c) 2013-2023 Simon Fraser University
- * Copyright (c) 2003-2023 John Willinsky
+ * Copyright (c) 2013-2025 Simon Fraser University
+ * Copyright (c) 2003-2025 John Willinsky
  * Distributed under the GNU GPL v3. For full terms see the file LICENSE.
  *
  * @class PiwikPlugin
@@ -13,21 +13,25 @@
 
 namespace APP\plugins\generic\piwik;
 
-use PKP\plugins\GenericPlugin;
+use APP\template\TemplateManager;
+use PKP\config\Config;
+use PKP\core\JSONMessage;
 use PKP\linkAction\LinkAction;
 use PKP\linkAction\request\AjaxModal;
-use PKP\config\Config;
+use PKP\plugins\GenericPlugin;
 use PKP\plugins\Hook;
-use PKP\core\JSONMessage;
-use APP\template\TemplateManager;
 
-class PiwikPlugin extends GenericPlugin {
+class PiwikPlugin extends GenericPlugin
+{
     /**
      * @copydoc Plugin::register()
      */
-    function register($category, $path, $mainContextId = null) {
+    public function register($category, $path, $mainContextId = null)
+    {
         $success = parent::register($category, $path, $mainContextId);
-        if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) return true;
+        if (!Config::getVar('general', 'installed') || defined('RUNNING_UPGRADE')) {
+            return true;
+        }
         if ($success && $this->getEnabled()) {
             // Insert Piwik page tag to footer
             Hook::add('TemplateManager::display', [$this, 'registerScript']);
@@ -38,37 +42,38 @@ class PiwikPlugin extends GenericPlugin {
 
     /**
      * Get the plugin display name.
-     * @return string
      */
-    function getDisplayName() {
+    public function getDisplayName(): string
+    {
         return __('plugins.generic.piwik.displayName');
     }
 
     /**
      * Get the plugin description.
-     * @return string
      */
-    function getDescription() {
+    public function getDescription(): string
+    {
         return __('plugins.generic.piwik.description');
     }
 
     /**
      * @copydoc Plugin::getActions()
      */
-    function getActions($request, $verb) {
+    public function getActions($request, $verb)
+    {
         $router = $request->getRouter();
         return array_merge(
-            $this->getEnabled()?[
+            $this->getEnabled() ? [
                 new LinkAction(
                     'settings',
                     new AjaxModal(
-                        $router->url($request, null, null, 'manage', null, array('verb' => 'settings', 'plugin' => $this->getName(), 'category' => 'generic')),
+                        $router->url($request, null, null, 'manage', null, ['verb' => 'settings', 'plugin' => $this->getName(), 'category' => 'generic']),
                         $this->getDisplayName()
                     ),
                     __('manager.plugins.settings'),
                     null
                 ),
-            ]:[],
+            ] : [],
             parent::getActions($request, $verb)
         );
     }
@@ -76,7 +81,8 @@ class PiwikPlugin extends GenericPlugin {
     /**
      * @copydoc Plugin::manage()
      */
-    function manage($args, $request) {
+    public function manage($args, $request)
+    {
         switch ($request->getUserVar('verb')) {
             case 'settings':
                 $context = $request->getContext();
@@ -102,17 +108,24 @@ class PiwikPlugin extends GenericPlugin {
      * @param $hookName string
      * @param $params array
      */
-    function registerScript($hookName, $params) {
+    public function registerScript($hookName, $params)
+    {
         $request = $this->getRequest();
         $context = $request->getContext();
-        if (!$context) return false;
+        if (!$context) {
+            return false;
+        }
         $router = $request->getRouter();
-        if (!is_a($router, 'PKPPageRouter')) return false;
+        if (!is_a($router, 'PKPPageRouter')) {
+            return false;
+        }
 
         $piwikSiteId = $this->getSetting($context->getId(), 'piwikSiteId');
         $piwikUrl = $this->getSetting($context->getId(), 'piwikUrl');
         $piwikRelativeUrl = preg_replace('/^https?:/', '', rtrim($piwikUrl, '/')) . '/';
-        if (empty($piwikSiteId) || empty($piwikUrl)) return false;
+        if (empty($piwikSiteId) || empty($piwikUrl)) {
+            return false;
+        }
 
         $contextPath = $context->getPath();
 
@@ -132,16 +145,14 @@ EOF;
 
         $templateMgr = TemplateManager::getManager($request);
         $templateMgr->addJavaScript(
-                'piwik',
-                $piwikCode,
-                [
-                    'priority' => TemplateManager::STYLE_SEQUENCE_LAST,
-                    'inline'   => true,
-                ]
+            'piwik',
+            $piwikCode,
+            [
+                'priority' => TemplateManager::STYLE_SEQUENCE_LAST,
+                'inline'   => true,
+            ]
         );
 
         return false;
     }
-
 }
-
